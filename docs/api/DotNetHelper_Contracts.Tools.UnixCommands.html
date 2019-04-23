@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnixCommands
+   | DotNetHelper-CommandLine </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnixCommands
+   | DotNetHelper-CommandLine ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../logo/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/gettingstarted.md" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/DotNetHelper-CommandLine.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="DotNetHelper_Contracts.Tools.html" title="DotNetHelper_Contracts.Tools" class="">DotNetHelper_Contracts.Tools</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="DotNetHelper_Contracts.Tools.CommandPrompt.html" title="CommandPrompt" class="">CommandPrompt</a>
+                          </li>
+                          <li class="active">
+                            <a href="DotNetHelper_Contracts.Tools.UnixCommands.html" title="UnixCommands" class="active">UnixCommands</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DotNetHelper_Contracts.Tools.UnixCommands">
+  
+  
+  <h1 id="DotNetHelper_Contracts_Tools_UnixCommands" data-uid="DotNetHelper_Contracts.Tools.UnixCommands" class="text-break">Class UnixCommands
+  </h1>
+  <div class="markdown level0 summary"><p>Helper class for common commands</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnixCommands</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DotNetHelper_Contracts.Tools.html">DotNetHelper_Contracts.Tools</a></h6>
+  <h6><strong>Assembly</strong>: DotNetHelper-CommandLine.dll</h6>
+  <h5 id="DotNetHelper_Contracts_Tools_UnixCommands_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnixCommands</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_AbortShutDownOrReboot_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_AbortShutDownOrReboot" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot">AbortShutDownOrReboot()</h4>
+  <div class="markdown level1 summary"><p>returns the hcommand for aborting a shutdown or restart</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AbortShutDownOrReboot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_CopyDirectory_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_CopyDirectory_System_String_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)">CopyDirectory(String, String)</h4>
+  <div class="markdown level1 summary"><p>Copy one directory to another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CopyDirectory(string from, string to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_CreateDirectory_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_CreateDirectory_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)">CreateDirectory(String)</h4>
+  <div class="markdown level1 summary"><p>returns the command to create the specified directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CreateDirectory(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_GetAttribute_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_GetAttribute_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)">GetAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Sets ownership on files and directories</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetAttribute(string fileOrPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileOrPath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_GetEnvironmentVariables_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_GetEnvironmentVariables" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables">GetEnvironmentVariables()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetEnvironmentVariables()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_GetOsVersion_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_GetOsVersion" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion">GetOsVersion()</h4>
+  <div class="markdown level1 summary"><p>return the command to get the Operating System version</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetOsVersion()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_GetSystemInfo_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_GetSystemInfo" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo">GetSystemInfo()</h4>
+  <div class="markdown level1 summary"><p>return command for getting system info</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetSystemInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_GetTaskList_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_GetTaskList" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList">GetTaskList()</h4>
+  <div class="markdown level1 summary"><p>returns the command get the task list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetTaskList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_MapDrive_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.MapDrive*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_MapDrive_System_Char_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)">MapDrive(Char, String)</h4>
+  <div class="markdown level1 summary"><p>returns the command for mapping a drive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MapDrive(char driveLetter, string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">driveLetter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_MoveFile_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.MoveFile*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_MoveFile_System_String_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)">MoveFile(String, String)</h4>
+  <div class="markdown level1 summary"><p>returns the commands for moving the specified file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MoveFile(string from, string to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_OpenControlPanel_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_OpenControlPanel" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel">OpenControlPanel()</h4>
+  <div class="markdown level1 summary"><p>returns the command for opening the control panel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string OpenControlPanel()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_OpenServices_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.OpenServices*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_OpenServices" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.OpenServices">OpenServices()</h4>
+  <div class="markdown level1 summary"><p>returns the command for opening the services</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string OpenServices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_Ping_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Ping*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_Ping_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)">Ping(String)</h4>
+  <div class="markdown level1 summary"><p>returns the command to get ping the specified host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Ping(string host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">host</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_Reboot_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Reboot*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_Reboot_System_Boolean_System_Nullable_System_TimeSpan__System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)">Reboot(Boolean, Nullable&lt;TimeSpan&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>returns the command for rebooting the host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Reboot(bool force, TimeSpan? delay = default(TimeSpan? ), string message = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_RemoveDirectory_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_RemoveDirectory_System_String_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)">RemoveDirectory(String)</h4>
+  <div class="markdown level1 summary"><p>Windows has a y/ n prompt.To get the prompt with Unix, use rm - i.The i means &quot;interactive&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RemoveDirectory(string directory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">directory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_Shutdown_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Shutdown*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_Shutdown_System_Boolean_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)">Shutdown(Boolean)</h4>
+  <div class="markdown level1 summary"><p>returns the command for shutting down the host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Shutdown(bool force)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_TailFile_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.TailFile*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_TailFile_System_String_System_Int32_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)">TailFile(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>returns command for tailing the specified files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TailFile(string fullFilePath, int outputLastLine = 10)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullFilePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">outputLastLine</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DotNetHelper_Contracts_Tools_UnixCommands_UnMapDrive_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive*"></a>
+  <h4 id="DotNetHelper_Contracts_Tools_UnixCommands_UnMapDrive_System_Char_" data-uid="DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)">UnMapDrive(Char)</h4>
+  <div class="markdown level1 summary"><p>returns the command for un-mapping a drive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UnMapDrive(char driveLetter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">driveLetter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright � 2019 Joseph McNeal Jr
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: DotNetHelper_Contracts.Tools
+  name: DotNetHelper_Contracts.Tools
+  href: api/DotNetHelper_Contracts.Tools.html
+  commentId: N:DotNetHelper_Contracts.Tools
+  fullName: DotNetHelper_Contracts.Tools
+  nameWithType: DotNetHelper_Contracts.Tools
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt
+  name: CommandPrompt
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html
+  commentId: T:DotNetHelper_Contracts.Tools.CommandPrompt
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt
+  nameWithType: CommandPrompt
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.#ctor(System.String,System.Boolean)
+  name: CommandPrompt(String, Boolean)
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt__ctor_System_String_System_Boolean_
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.#ctor(System.String,System.Boolean)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CommandPrompt(System.String, System.Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, Boolean)
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.#ctor*
+  name: CommandPrompt
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt__ctor_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.#ctor
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CommandPrompt
+  nameWithType: CommandPrompt.CommandPrompt
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  name: CreateNoWindow
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_CreateNoWindow
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  nameWithType: CommandPrompt.CreateNoWindow
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow*
+  name: CreateNoWindow
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_CreateNoWindow_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  nameWithType: CommandPrompt.CreateNoWindow
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  name: CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_CreateStartInfo_System_String_System_String_System_Boolean_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String, System.String, System.Boolean, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  nameWithType: CommandPrompt.CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo*
+  name: CreateStartInfo
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_CreateStartInfo_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo
+  nameWithType: CommandPrompt.CreateStartInfo
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  name: RedirectStandardError
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RedirectStandardError
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  nameWithType: CommandPrompt.RedirectStandardError
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError*
+  name: RedirectStandardError
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RedirectStandardError_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  nameWithType: CommandPrompt.RedirectStandardError
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  name: RedirectStandardOutput
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RedirectStandardOutput
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  nameWithType: CommandPrompt.RedirectStandardOutput
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput*
+  name: RedirectStandardOutput
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RedirectStandardOutput_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  nameWithType: CommandPrompt.RedirectStandardOutput
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  nameWithType: CommandPrompt.RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  name: RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RunCommand_System_String_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  name: RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand*
+  name: RunCommand
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_RunCommand_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand
+  nameWithType: CommandPrompt.RunCommand
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  name: UseShellExecute
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_UseShellExecute
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  nameWithType: CommandPrompt.UseShellExecute
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute*
+  name: UseShellExecute
+  href: api/DotNetHelper_Contracts.Tools.CommandPrompt.html#DotNetHelper_Contracts_Tools_CommandPrompt_UseShellExecute_
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  nameWithType: CommandPrompt.UseShellExecute
+- uid: DotNetHelper_Contracts.Tools.UnixCommands
+  name: UnixCommands
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html
+  commentId: T:DotNetHelper_Contracts.Tools.UnixCommands
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands
+  nameWithType: UnixCommands
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  name: AbortShutDownOrReboot()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_AbortShutDownOrReboot
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot()
+  nameWithType: UnixCommands.AbortShutDownOrReboot()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot*
+  name: AbortShutDownOrReboot
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_AbortShutDownOrReboot_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  nameWithType: UnixCommands.AbortShutDownOrReboot
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)
+  name: CopyDirectory(String, String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_CopyDirectory_System_String_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String, System.String)
+  nameWithType: UnixCommands.CopyDirectory(String, String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory*
+  name: CopyDirectory
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_CopyDirectory_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory
+  nameWithType: UnixCommands.CopyDirectory
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  name: CreateDirectory(String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_CreateDirectory_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  nameWithType: UnixCommands.CreateDirectory(String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory*
+  name: CreateDirectory
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_CreateDirectory_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory
+  nameWithType: UnixCommands.CreateDirectory
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  name: GetAttribute(String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetAttribute_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  nameWithType: UnixCommands.GetAttribute(String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute*
+  name: GetAttribute
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetAttribute_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute
+  nameWithType: UnixCommands.GetAttribute
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  name: GetEnvironmentVariables()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetEnvironmentVariables
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables()
+  nameWithType: UnixCommands.GetEnvironmentVariables()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables*
+  name: GetEnvironmentVariables
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetEnvironmentVariables_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  nameWithType: UnixCommands.GetEnvironmentVariables
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  name: GetOsVersion()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetOsVersion
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion()
+  nameWithType: UnixCommands.GetOsVersion()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion*
+  name: GetOsVersion
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetOsVersion_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  nameWithType: UnixCommands.GetOsVersion
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  name: GetSystemInfo()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetSystemInfo
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo()
+  nameWithType: UnixCommands.GetSystemInfo()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo*
+  name: GetSystemInfo
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetSystemInfo_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  nameWithType: UnixCommands.GetSystemInfo
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  name: GetTaskList()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetTaskList
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList()
+  nameWithType: UnixCommands.GetTaskList()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList*
+  name: GetTaskList
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_GetTaskList_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  nameWithType: UnixCommands.GetTaskList
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)
+  name: MapDrive(Char, String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_MapDrive_System_Char_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char, System.String)
+  nameWithType: UnixCommands.MapDrive(Char, String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive*
+  name: MapDrive
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_MapDrive_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.MapDrive
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive
+  nameWithType: UnixCommands.MapDrive
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)
+  name: MoveFile(String, String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_MoveFile_System_String_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String, System.String)
+  nameWithType: UnixCommands.MoveFile(String, String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile*
+  name: MoveFile
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_MoveFile_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.MoveFile
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile
+  nameWithType: UnixCommands.MoveFile
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  name: OpenControlPanel()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_OpenControlPanel
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel()
+  nameWithType: UnixCommands.OpenControlPanel()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel*
+  name: OpenControlPanel
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_OpenControlPanel_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  nameWithType: UnixCommands.OpenControlPanel
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  name: OpenServices()
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_OpenServices
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices()
+  nameWithType: UnixCommands.OpenServices()
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices*
+  name: OpenServices
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_OpenServices_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  nameWithType: UnixCommands.OpenServices
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  name: Ping(String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Ping_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  nameWithType: UnixCommands.Ping(String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Ping*
+  name: Ping
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Ping_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Ping
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Ping
+  nameWithType: UnixCommands.Ping
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  name: Reboot(Boolean, Nullable<TimeSpan>, String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Reboot_System_Boolean_System_Nullable_System_TimeSpan__System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  name.vb: Reboot(Boolean, Nullable(Of TimeSpan), String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean, System.Nullable<System.TimeSpan>, System.String)
+  fullName.vb: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean, System.Nullable(Of System.TimeSpan), System.String)
+  nameWithType: UnixCommands.Reboot(Boolean, Nullable<TimeSpan>, String)
+  nameWithType.vb: UnixCommands.Reboot(Boolean, Nullable(Of TimeSpan), String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Reboot*
+  name: Reboot
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Reboot_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Reboot
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Reboot
+  nameWithType: UnixCommands.Reboot
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  name: RemoveDirectory(String)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_RemoveDirectory_System_String_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  nameWithType: UnixCommands.RemoveDirectory(String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory*
+  name: RemoveDirectory
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_RemoveDirectory_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory
+  nameWithType: UnixCommands.RemoveDirectory
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  name: Shutdown(Boolean)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Shutdown_System_Boolean_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  nameWithType: UnixCommands.Shutdown(Boolean)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown*
+  name: Shutdown
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_Shutdown_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Shutdown
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown
+  nameWithType: UnixCommands.Shutdown
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)
+  name: TailFile(String, Int32)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_TailFile_System_String_System_Int32_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String, System.Int32)
+  nameWithType: UnixCommands.TailFile(String, Int32)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.TailFile*
+  name: TailFile
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_TailFile_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.TailFile
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.TailFile
+  nameWithType: UnixCommands.TailFile
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  name: UnMapDrive(Char)
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_UnMapDrive_System_Char_
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  nameWithType: UnixCommands.UnMapDrive(Char)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive*
+  name: UnMapDrive
+  href: api/DotNetHelper_Contracts.Tools.UnixCommands.html#DotNetHelper_Contracts_Tools_UnixCommands_UnMapDrive_
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive
+  isSpec: "True"
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive
+  nameWithType: UnixCommands.UnMapDrive

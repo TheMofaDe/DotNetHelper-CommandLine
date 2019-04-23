@@ -1,0 +1,850 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt
+  commentId: T:DotNetHelper_Contracts.Tools.CommandPrompt
+  id: CommandPrompt
+  parent: DotNetHelper_Contracts.Tools
+  children:
+  - DotNetHelper_Contracts.Tools.CommandPrompt.#ctor(System.String,System.Boolean)
+  - DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  - DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  - DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  - DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  - DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  - DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  - DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  - DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  langs:
+  - csharp
+  - vb
+  name: CommandPrompt
+  nameWithType: CommandPrompt
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt
+  type: Class
+  source:
+    id: CommandPrompt
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 7
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nA command-line helper class that makes it easy to run commands.\n"
+  example: []
+  syntax:
+    content: public class CommandPrompt
+    content.vb: Public Class CommandPrompt
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  id: CreateNoWindow
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CreateNoWindow
+  nameWithType: CommandPrompt.CreateNoWindow
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  type: Property
+  source:
+    id: CreateNoWindow
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 10
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public bool CreateNoWindow { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CreateNoWindow As Boolean
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  id: UseShellExecute
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: UseShellExecute
+  nameWithType: CommandPrompt.UseShellExecute
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  type: Property
+  source:
+    id: UseShellExecute
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public bool UseShellExecute { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseShellExecute As Boolean
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  id: RedirectStandardError
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RedirectStandardError
+  nameWithType: CommandPrompt.RedirectStandardError
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  type: Property
+  source:
+    id: RedirectStandardError
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 12
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public bool RedirectStandardError { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RedirectStandardError As Boolean
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  commentId: P:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  id: RedirectStandardOutput
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RedirectStandardOutput
+  nameWithType: CommandPrompt.RedirectStandardOutput
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  type: Property
+  source:
+    id: RedirectStandardOutput
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 13
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public bool RedirectStandardOutput { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RedirectStandardOutput As Boolean
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.#ctor(System.String,System.Boolean)
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CommandPrompt(String, Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, Boolean)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CommandPrompt(System.String, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 14
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public CommandPrompt(string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
+    parameters:
+    - id: cmdLocation
+      type: System.String
+    - id: hideWindow
+      type: System.Boolean
+    content.vb: Public Sub New(cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  id: CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
+  nameWithType: CommandPrompt.CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String, System.String, System.Boolean, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  type: Method
+  source:
+    id: CreateStartInfo
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 33
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public ProcessStartInfo CreateStartInfo(string command, string workingDirectory, bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
+    parameters:
+    - id: command
+      type: System.String
+      description: command to run
+    - id: workingDirectory
+      type: System.String
+      description: 'directory to run command from '
+    - id: hideWindow
+      type: System.Boolean
+      description: 'self-explained. If true will show command promopt during execution of thecommand '
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    return:
+      type: System.Diagnostics.ProcessStartInfo
+      description: ''
+    content.vb: Public Function CreateStartInfo(command As String, workingDirectory As String, hideWindow As Boolean = True, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing) As ProcessStartInfo
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  id: RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  type: Method
+  source:
+    id: RunCommand
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 56
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public int? RunCommand(string command, ProcessStartInfo info = null, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null)
+    parameters:
+    - id: command
+      type: System.String
+      description: ''
+    - id: info
+      type: System.Diagnostics.ProcessStartInfo
+      description: ''
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    - id: exited
+      type: System.EventHandler
+      description: ''
+    return:
+      type: System.Nullable{System.Int32}
+      description: 'the process Exit Code '
+    content.vb: Public Function RunCommand(command As String, info As ProcessStartInfo = Nothing, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing) As Integer?
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  id: RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  type: Method
+  source:
+    id: RunCommand
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 74
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public int? RunCommand(string command, string workingDirectory, ProcessStartInfo info = null, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: workingDirectory
+      type: System.String
+    - id: info
+      type: System.Diagnostics.ProcessStartInfo
+      description: ''
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    - id: exited
+      type: System.EventHandler
+      description: ''
+    return:
+      type: System.Nullable{System.Int32}
+      description: 'the process Exit Code '
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String, info As ProcessStartInfo = Nothing, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing) As Integer?
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  commentId: M:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  id: RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  parent: DotNetHelper_Contracts.Tools.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  nameWithType: CommandPrompt.RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  type: Method
+  source:
+    id: RunCommand
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    startLine: 126
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null)
+    parameters:
+    - id: info
+      type: System.Diagnostics.ProcessStartInfo
+      description: ''
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    - id: exited
+      type: System.EventHandler
+      description: ''
+    return:
+      type: System.Nullable{System.Int32}
+      description: 'the process Exit Code '
+    content.vb: Public Function RunCommand(info As ProcessStartInfo, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing) As Integer?
+  overload: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DotNetHelper_Contracts.Tools
+  commentId: N:DotNetHelper_Contracts.Tools
+  name: DotNetHelper_Contracts.Tools
+  nameWithType: DotNetHelper_Contracts.Tools
+  fullName: DotNetHelper_Contracts.Tools
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+  name: CreateNoWindow
+  nameWithType: CommandPrompt.CreateNoWindow
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+  name: UseShellExecute
+  nameWithType: CommandPrompt.UseShellExecute
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+  name: RedirectStandardError
+  nameWithType: CommandPrompt.RedirectStandardError
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+  name: RedirectStandardOutput
+  nameWithType: CommandPrompt.RedirectStandardOutput
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.#ctor*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.#ctor
+  name: CommandPrompt
+  nameWithType: CommandPrompt.CommandPrompt
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CommandPrompt
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo
+  name: CreateStartInfo
+  nameWithType: CommandPrompt.CreateStartInfo
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo
+- uid: System.Diagnostics.DataReceivedEventHandler
+  commentId: T:System.Diagnostics.DataReceivedEventHandler
+  parent: System.Diagnostics
+  isExternal: true
+  name: DataReceivedEventHandler
+  nameWithType: DataReceivedEventHandler
+  fullName: System.Diagnostics.DataReceivedEventHandler
+- uid: System.Diagnostics.ProcessStartInfo
+  commentId: T:System.Diagnostics.ProcessStartInfo
+  parent: System.Diagnostics
+  isExternal: true
+  name: ProcessStartInfo
+  nameWithType: ProcessStartInfo
+  fullName: System.Diagnostics.ProcessStartInfo
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand*
+  commentId: Overload:DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand
+  name: RunCommand
+  nameWithType: CommandPrompt.RunCommand
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

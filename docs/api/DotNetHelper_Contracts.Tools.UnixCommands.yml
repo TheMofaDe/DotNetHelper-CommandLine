@@ -1,0 +1,1216 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_Contracts.Tools.UnixCommands
+  commentId: T:DotNetHelper_Contracts.Tools.UnixCommands
+  id: UnixCommands
+  parent: DotNetHelper_Contracts.Tools
+  children:
+  - DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  - DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  - DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  - DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  - DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  - DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  - DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  - DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  - DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  - DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)
+  - DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  langs:
+  - csharp
+  - vb
+  name: UnixCommands
+  nameWithType: UnixCommands
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands
+  type: Class
+  source:
+    id: UnixCommands
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nHelper class for common commands  \n"
+  example: []
+  syntax:
+    content: public static class UnixCommands
+    content.vb: Public Module UnixCommands
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String,System.String)
+  id: CopyDirectory(System.String,System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: CopyDirectory(String, String)
+  nameWithType: UnixCommands.CopyDirectory(String, String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String, System.String)
+  type: Method
+  source:
+    id: CopyDirectory
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 19
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nCopy one directory to another \n"
+  example: []
+  syntax:
+    content: public static string CopyDirectory(string from, string to)
+    parameters:
+    - id: from
+      type: System.String
+      description: ''
+    - id: to
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function CopyDirectory(from As String, to As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String,System.Int32)
+  id: TailFile(System.String,System.Int32)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: TailFile(String, Int32)
+  nameWithType: UnixCommands.TailFile(String, Int32)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String, System.Int32)
+  type: Method
+  source:
+    id: TailFile
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 39
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns command for tailing the specified files\n"
+  example: []
+  syntax:
+    content: public static string TailFile(string fullFilePath, int outputLastLine = 10)
+    parameters:
+    - id: fullFilePath
+      type: System.String
+      description: ''
+    - id: outputLastLine
+      type: System.Int32
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function TailFile(fullFilePath As String, outputLastLine As Integer = 10) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.TailFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  id: GetSystemInfo
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: GetSystemInfo()
+  nameWithType: UnixCommands.GetSystemInfo()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo()
+  type: Method
+  source:
+    id: GetSystemInfo
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 50
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturn command for getting system info\n"
+  example: []
+  syntax:
+    content: public static string GetSystemInfo()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetSystemInfo As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  id: GetOsVersion
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: GetOsVersion()
+  nameWithType: UnixCommands.GetOsVersion()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion()
+  type: Method
+  source:
+    id: GetOsVersion
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 59
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturn the command to get the Operating System version\n"
+  example: []
+  syntax:
+    content: public static string GetOsVersion()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetOsVersion As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  id: GetTaskList
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: GetTaskList()
+  nameWithType: UnixCommands.GetTaskList()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList()
+  type: Method
+  source:
+    id: GetTaskList
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 68
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command get the task list\n"
+  example: []
+  syntax:
+    content: public static string GetTaskList()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetTaskList As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  id: Ping(System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: Ping(String)
+  nameWithType: UnixCommands.Ping(String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
+  type: Method
+  source:
+    id: Ping
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 78
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command to get ping the specified host\n"
+  example: []
+  syntax:
+    content: public static string Ping(string host)
+    parameters:
+    - id: host
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Ping(host As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.Ping*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  id: CreateDirectory(System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: CreateDirectory(String)
+  nameWithType: UnixCommands.CreateDirectory(String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
+  type: Method
+  source:
+    id: CreateDirectory
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 88
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command to create the specified directory \n"
+  example: []
+  syntax:
+    content: public static string CreateDirectory(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function CreateDirectory(path As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String,System.String)
+  id: MoveFile(System.String,System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: MoveFile(String, String)
+  nameWithType: UnixCommands.MoveFile(String, String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String, System.String)
+  type: Method
+  source:
+    id: MoveFile
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 99
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the commands for moving the specified file\n"
+  example: []
+  syntax:
+    content: public static string MoveFile(string from, string to)
+    parameters:
+    - id: from
+      type: System.String
+      description: ''
+    - id: to
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function MoveFile(from As String, to As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  id: GetAttribute(System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(String)
+  nameWithType: UnixCommands.GetAttribute(String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
+  type: Method
+  source:
+    id: GetAttribute
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 118
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nSets ownership on files and directories\n"
+  example: []
+  syntax:
+    content: public static string GetAttribute(string fileOrPath)
+    parameters:
+    - id: fileOrPath
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetAttribute(fileOrPath As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  id: OpenServices
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: OpenServices()
+  nameWithType: UnixCommands.OpenServices()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices()
+  type: Method
+  source:
+    id: OpenServices
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 133
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for opening the services\n"
+  example: []
+  syntax:
+    content: public static string OpenServices()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function OpenServices As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  id: OpenControlPanel
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: OpenControlPanel()
+  nameWithType: UnixCommands.OpenControlPanel()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel()
+  type: Method
+  source:
+    id: OpenControlPanel
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 142
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for opening the control panel\n"
+  example: []
+  syntax:
+    content: public static string OpenControlPanel()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function OpenControlPanel As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  id: Shutdown(System.Boolean)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: Shutdown(Boolean)
+  nameWithType: UnixCommands.Shutdown(Boolean)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
+  type: Method
+  source:
+    id: Shutdown
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 152
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for shutting down the host\n"
+  example: []
+  syntax:
+    content: public static string Shutdown(bool force)
+    parameters:
+    - id: force
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Shutdown(force As Boolean) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  id: Reboot(System.Boolean,System.Nullable{System.TimeSpan},System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: Reboot(Boolean, Nullable<TimeSpan>, String)
+  nameWithType: UnixCommands.Reboot(Boolean, Nullable<TimeSpan>, String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean, System.Nullable<System.TimeSpan>, System.String)
+  type: Method
+  source:
+    id: Reboot
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 167
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for rebooting the host\n"
+  example: []
+  syntax:
+    content: public static string Reboot(bool force, TimeSpan? delay = default(TimeSpan? ), string message = null)
+    parameters:
+    - id: force
+      type: System.Boolean
+      description: ''
+    - id: delay
+      type: System.Nullable{System.TimeSpan}
+      description: ''
+    - id: message
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Reboot(force As Boolean, delay As TimeSpan? = Nothing, message As String = Nothing) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.Reboot*
+  nameWithType.vb: UnixCommands.Reboot(Boolean, Nullable(Of TimeSpan), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean, System.Nullable(Of System.TimeSpan), System.String)
+  name.vb: Reboot(Boolean, Nullable(Of TimeSpan), String)
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  id: AbortShutDownOrReboot
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: AbortShutDownOrReboot()
+  nameWithType: UnixCommands.AbortShutDownOrReboot()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot()
+  type: Method
+  source:
+    id: AbortShutDownOrReboot
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 187
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the hcommand for aborting a shutdown or restart\n"
+  example: []
+  syntax:
+    content: public static string AbortShutDownOrReboot()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function AbortShutDownOrReboot As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  id: RemoveDirectory(System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: RemoveDirectory(String)
+  nameWithType: UnixCommands.RemoveDirectory(String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
+  type: Method
+  source:
+    id: RemoveDirectory
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 198
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nWindows has a y/ n prompt.To get the prompt with Unix, use rm - i.The i means &quot;interactive&quot;.\n"
+  example: []
+  syntax:
+    content: public static string RemoveDirectory(string directory)
+    parameters:
+    - id: directory
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function RemoveDirectory(directory As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  id: GetEnvironmentVariables
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentVariables()
+  nameWithType: UnixCommands.GetEnvironmentVariables()
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables()
+  type: Method
+  source:
+    id: GetEnvironmentVariables
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 209
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  syntax:
+    content: public static string GetEnvironmentVariables()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetEnvironmentVariables As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char,System.String)
+  id: MapDrive(System.Char,System.String)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: MapDrive(Char, String)
+  nameWithType: UnixCommands.MapDrive(Char, String)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char, System.String)
+  type: Method
+  source:
+    id: MapDrive
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 221
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for mapping a drive \n"
+  example: []
+  syntax:
+    content: public static string MapDrive(char driveLetter, string path)
+    parameters:
+    - id: driveLetter
+      type: System.Char
+      description: ''
+    - id: path
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function MapDrive(driveLetter As Char, path As String) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  commentId: M:DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  id: UnMapDrive(System.Char)
+  parent: DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: UnMapDrive(Char)
+  nameWithType: UnixCommands.UnMapDrive(Char)
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
+  type: Method
+  source:
+    id: UnMapDrive
+    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    startLine: 232
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_Contracts.Tools
+  summary: "\nreturns the command for un-mapping a drive \n"
+  example: []
+  syntax:
+    content: public static string UnMapDrive(char driveLetter)
+    parameters:
+    - id: driveLetter
+      type: System.Char
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function UnMapDrive(driveLetter As Char) As String
+  overload: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: DotNetHelper_Contracts.Tools
+  commentId: N:DotNetHelper_Contracts.Tools
+  name: DotNetHelper_Contracts.Tools
+  nameWithType: DotNetHelper_Contracts.Tools
+  fullName: DotNetHelper_Contracts.Tools
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory
+  name: CopyDirectory
+  nameWithType: UnixCommands.CopyDirectory
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.TailFile*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.TailFile
+  name: TailFile
+  nameWithType: UnixCommands.TailFile
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.TailFile
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+  name: GetSystemInfo
+  nameWithType: UnixCommands.GetSystemInfo
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+  name: GetOsVersion
+  nameWithType: UnixCommands.GetOsVersion
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+  name: GetTaskList
+  nameWithType: UnixCommands.GetTaskList
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Ping*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Ping
+  name: Ping
+  nameWithType: UnixCommands.Ping
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Ping
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory
+  name: CreateDirectory
+  nameWithType: UnixCommands.CreateDirectory
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.MoveFile
+  name: MoveFile
+  nameWithType: UnixCommands.MoveFile
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute
+  name: GetAttribute
+  nameWithType: UnixCommands.GetAttribute
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+  name: OpenServices
+  nameWithType: UnixCommands.OpenServices
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+  name: OpenControlPanel
+  nameWithType: UnixCommands.OpenControlPanel
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Shutdown
+  name: Shutdown
+  nameWithType: UnixCommands.Shutdown
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.Reboot*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.Reboot
+  name: Reboot
+  nameWithType: UnixCommands.Reboot
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.Reboot
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<TimeSpan>
+  nameWithType: Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
+  nameWithType.vb: Nullable(Of TimeSpan)
+  fullName.vb: System.Nullable(Of System.TimeSpan)
+  name.vb: Nullable(Of TimeSpan)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+  name: AbortShutDownOrReboot
+  nameWithType: UnixCommands.AbortShutDownOrReboot
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory
+  name: RemoveDirectory
+  nameWithType: UnixCommands.RemoveDirectory
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+  name: GetEnvironmentVariables
+  nameWithType: UnixCommands.GetEnvironmentVariables
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.MapDrive
+  name: MapDrive
+  nameWithType: UnixCommands.MapDrive
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive*
+  commentId: Overload:DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive
+  name: UnMapDrive
+  nameWithType: UnixCommands.UnMapDrive
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive

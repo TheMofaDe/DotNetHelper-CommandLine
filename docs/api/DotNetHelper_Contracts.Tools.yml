@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_Contracts.Tools
+  commentId: N:DotNetHelper_Contracts.Tools
+  id: DotNetHelper_Contracts.Tools
+  children:
+  - DotNetHelper_Contracts.Tools.CommandPrompt
+  - DotNetHelper_Contracts.Tools.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper_Contracts.Tools
+  nameWithType: DotNetHelper_Contracts.Tools
+  fullName: DotNetHelper_Contracts.Tools
+  type: Namespace
+  assemblies:
+  - DotNetHelper-CommandLine
+references:
+- uid: DotNetHelper_Contracts.Tools.CommandPrompt
+  commentId: T:DotNetHelper_Contracts.Tools.CommandPrompt
+  name: CommandPrompt
+  nameWithType: CommandPrompt
+  fullName: DotNetHelper_Contracts.Tools.CommandPrompt
+- uid: DotNetHelper_Contracts.Tools.UnixCommands
+  commentId: T:DotNetHelper_Contracts.Tools.UnixCommands
+  name: UnixCommands
+  nameWithType: UnixCommands
+  fullName: DotNetHelper_Contracts.Tools.UnixCommands
