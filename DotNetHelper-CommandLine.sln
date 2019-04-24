@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28822.285
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetHelper-CommandLine", "src\DotNetHelper-CommandLine\DotNetHelper-CommandLine.csproj", "{EA5D1F3D-A206-45FD-9137-8E709F7B55B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetHelper-CommandLine-Tests", "tests\DotNetHelper-CommandLine-Tests\DotNetHelper-CommandLine-Tests.csproj", "{52F46D91-9DD3-40E8-A5E0-A1724CE629C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetHelper-CommandLine-Tests", "tests\DotNetHelper-CommandLine-Tests\DotNetHelper-CommandLine-Tests.csproj", "{52F46D91-9DD3-40E8-A5E0-A1724CE629C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "samples\ConsoleSample\ConsoleSample.csproj", "{3AE7892B-BA91-437B-BACE-FDAF5624376C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{52F46D91-9DD3-40E8-A5E0-A1724CE629C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52F46D91-9DD3-40E8-A5E0-A1724CE629C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52F46D91-9DD3-40E8-A5E0-A1724CE629C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE7892B-BA91-437B-BACE-FDAF5624376C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE7892B-BA91-437B-BACE-FDAF5624376C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE7892B-BA91-437B-BACE-FDAF5624376C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE7892B-BA91-437B-BACE-FDAF5624376C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

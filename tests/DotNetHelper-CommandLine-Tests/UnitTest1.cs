@@ -1,3 +1,5 @@
+using System;
+using System.Diagnostics;
 using DotNetHelper_Contracts.Tools;
 using NUnit.Framework;
 
@@ -11,14 +13,14 @@ namespace Tests
         public CommandPrompt CommandPrompt { get; } = new CommandPrompt();
         public CommandLineTestFixture() 
         {
-    
-        }
 
+
+        }
 
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            
+
         }
 
         [OneTimeTearDown]
