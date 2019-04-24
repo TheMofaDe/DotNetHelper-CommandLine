@@ -26,11 +26,13 @@ A command-line helper class that makes it easy to run commands.
 
     }
 ```
-##Produces
-Reference-style: 
+# Produces
+ 
 ![alt text][logo]
 
-[logo]: images/codesnipper1.PNG "Code Snippet Output"
+[logo]: images/codesnippet1.PNG "Code Snippet Output"
+
+[logo]: (images/codesnippet1.PNG) "Code Snippet Output"
 
 ## Targeted .NET Frameworks
     NET452

@@ -31,8 +31,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands
   type: Class
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: UnixCommands
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 11
   assemblies:
   - DotNetHelper-CommandLine
@@ -71,8 +75,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.CopyDirectory(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CopyDirectory
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 19
   assemblies:
   - DotNetHelper-CommandLine
@@ -111,8 +119,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.TailFile(System.String, System.Int32)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: TailFile
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 39
   assemblies:
   - DotNetHelper-CommandLine
@@ -151,8 +163,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetSystemInfo()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: GetSystemInfo
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 50
   assemblies:
   - DotNetHelper-CommandLine
@@ -184,8 +200,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetOsVersion()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: GetOsVersion
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 59
   assemblies:
   - DotNetHelper-CommandLine
@@ -217,8 +237,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetTaskList()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: GetTaskList
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 68
   assemblies:
   - DotNetHelper-CommandLine
@@ -250,8 +274,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.Ping(System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: Ping
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 78
   assemblies:
   - DotNetHelper-CommandLine
@@ -287,8 +315,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.CreateDirectory(System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateDirectory
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 88
   assemblies:
   - DotNetHelper-CommandLine
@@ -324,8 +356,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.MoveFile(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: MoveFile
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 99
   assemblies:
   - DotNetHelper-CommandLine
@@ -364,8 +400,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetAttribute(System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: GetAttribute
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 118
   assemblies:
   - DotNetHelper-CommandLine
@@ -401,8 +441,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenServices()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: OpenServices
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 133
   assemblies:
   - DotNetHelper-CommandLine
@@ -434,8 +478,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.OpenControlPanel()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: OpenControlPanel
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 142
   assemblies:
   - DotNetHelper-CommandLine
@@ -467,8 +515,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.Shutdown(System.Boolean)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: Shutdown
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 152
   assemblies:
   - DotNetHelper-CommandLine
@@ -504,8 +556,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.Reboot(System.Boolean, System.Nullable<System.TimeSpan>, System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: Reboot
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 167
   assemblies:
   - DotNetHelper-CommandLine
@@ -550,8 +606,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.AbortShutDownOrReboot()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: AbortShutDownOrReboot
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 187
   assemblies:
   - DotNetHelper-CommandLine
@@ -583,8 +643,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.RemoveDirectory(System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RemoveDirectory
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 198
   assemblies:
   - DotNetHelper-CommandLine
@@ -620,8 +684,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.GetEnvironmentVariables()
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: GetEnvironmentVariables
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 209
   assemblies:
   - DotNetHelper-CommandLine
@@ -650,8 +718,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.MapDrive(System.Char, System.String)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: MapDrive
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 221
   assemblies:
   - DotNetHelper-CommandLine
@@ -690,8 +762,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.UnixCommands.UnMapDrive(System.Char)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/UnixCommands.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: UnMapDrive
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\UnixCommands.cs
+    path: ../src/DotNetHelper-CommandLine/UnixCommands.cs
     startLine: 232
   assemblies:
   - DotNetHelper-CommandLine

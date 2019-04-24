@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Code/Gitlab/TheMofaDe/DotNet-Starter-Template/docs",
+  "source_base_path": "C:/Business/TheMoFaDe/Code/TheMofaDe/DotNetHelper-CommandLine/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_Contracts.Tools.CommandPrompt.html",
-          "hash": "P8ASskIv5i5N/xq3h47Tng=="
+          "hash": "6bnN9VFNOWX2pNYJH/Ss+w=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_Contracts.Tools.UnixCommands.html",
-          "hash": "qA7SiuSN01/m14CL6fDPTw=="
+          "hash": "sLi5I+EoeJdJ78HjfYDAaw=="
         }
       },
       "is_incremental": false,
@@ -49,12 +49,24 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/codesnippet1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/codesnippet1.PNG",
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/codesnippet1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "LH3439+POH0kxN+C6Bhsxw=="
+          "hash": "fWQ3EoqcvtrDvUvAL5ehNg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +78,7 @@
       "output": {
         "resource": {
           "relative_path": "langwordmapping/langwordMapping.yml",
-          "link_to_path": "D:\\Code\\Gitlab\\TheMofaDe\\DotNet-Starter-Template\\docs/langwordmapping/langwordMapping.yml"
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/langwordmapping/langwordMapping.yml"
         }
       },
       "is_incremental": false,
@@ -76,14 +88,24 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -96,18 +118,6 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
           "skipped_file_count": 0
         }
       }

@@ -83,10 +83,32 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="dotnethelper-commandline">DotNetHelper-CommandLine</h1>
 
-<p>Description</p>
+<p>A command-line helper class that makes it easy to run commands.</p>
 <h2 id="how-to-use">How to use</h2>
-<pre><code class="lang-csharp">// code snippet
+<pre><code class="lang-csharp">        static void Main(string[] args)
+        {
+                var cmd = new CommandPrompt();
+                cmd.RunCommand(UnixCommands.Ping(&quot;www.google.com&quot;), null, OnDataReceived, ErrorDataReceived, Exited);
+                cmd.RunCommand(UnixCommands.Ping(&quot;This is not a valid command&quot;), null, OnDataReceived, ErrorDataReceived, Exited);
+                Console.ReadLine();
+        }
+        private static void Exited(object sender, EventArgs e)
+        {
+            Console.WriteLine(&quot;command has finished.&quot;);
+        }
+        private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Console.WriteLine(&quot;error : &quot; + e.Data);
+        }
+        private static void OnDataReceived(object sender, DataReceivedEventArgs args)
+        {
+            Console.WriteLine(&quot;received data : &quot; + args.Data);
+        }
+
+    }
 </code></pre>
+<p>##Produces</p>
+<p><img src="images/codesnippet1.PNG" alt="alt text" title="Code Snippet Output"></p>
 <h2 id="targeted-net-frameworks">Targeted .NET Frameworks</h2>
 <pre><code>NET452
 NETSTANDARD2.0
@@ -98,6 +120,9 @@ NETSTANDARD2.0
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

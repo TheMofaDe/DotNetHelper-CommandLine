@@ -22,8 +22,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt
   type: Class
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CommandPrompt
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 7
   assemblies:
   - DotNetHelper-CommandLine
@@ -61,8 +65,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateNoWindow
   type: Property
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateNoWindow
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 10
   assemblies:
   - DotNetHelper-CommandLine
@@ -92,8 +100,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.UseShellExecute
   type: Property
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: UseShellExecute
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 11
   assemblies:
   - DotNetHelper-CommandLine
@@ -123,8 +135,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardError
   type: Property
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RedirectStandardError
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 12
   assemblies:
   - DotNetHelper-CommandLine
@@ -154,8 +170,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RedirectStandardOutput
   type: Property
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RedirectStandardOutput
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 13
   assemblies:
   - DotNetHelper-CommandLine
@@ -185,8 +205,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CommandPrompt(System.String, System.Boolean)
   type: Constructor
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: .ctor
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 14
   assemblies:
   - DotNetHelper-CommandLine
@@ -216,8 +240,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.CreateStartInfo(System.String, System.String, System.Boolean, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateStartInfo
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 33
   assemblies:
   - DotNetHelper-CommandLine
@@ -263,8 +291,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 56
   assemblies:
   - DotNetHelper-CommandLine
@@ -310,8 +342,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 74
   assemblies:
   - DotNetHelper-CommandLine
@@ -359,8 +395,12 @@ items:
   fullName: DotNetHelper_Contracts.Tools.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
   type: Method
   source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
-    path: D:\Code\Gitlab\TheMofaDe\DotNet-Starter-Template\src\DotNetHelper-CommandLine\CommandPrompt.cs
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
     startLine: 126
   assemblies:
   - DotNetHelper-CommandLine
