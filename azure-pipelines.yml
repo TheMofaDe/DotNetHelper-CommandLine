@@ -2,9 +2,6 @@ variables:
   DOTNET_SDK_VERSION: '2.2.203'
   DOTNET_PACKAGE_TYPE: 'sdk'
   RUBY_VERSION: '2.5'
-  NUGET_API_KEY: '$(NUGET_API_KEY)'
-  NUGET_API_URL: '$(NUGET_API_URL)'
-  CODECOV_TOKEN: '$(CODECOV_TOKEN)'
 
 jobs:
 - template: build/tmpl/jobs.yml
