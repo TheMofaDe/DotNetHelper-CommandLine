@@ -1,6 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
-namespace DotNetHelper_Contracts.Tools
+namespace DotNetHelper_CommandLine
 {
     /// <summary>
     /// A command-line helper class that makes it easy to run commands.
@@ -26,7 +27,7 @@ namespace DotNetHelper_Contracts.Tools
         /// </summary>
         /// <param name="command">command to run</param>
         /// <param name="workingDirectory">directory to run command from </param>
-        /// <param name="hideWindow">self-explained. If true will show command promopt during execution of thecommand </param>
+        /// <param name="hideWindow">if true will show cmd will show during execution of the command </param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
         /// <returns></returns>
@@ -49,17 +50,39 @@ namespace DotNetHelper_Contracts.Tools
         /// 
         /// </summary>
         /// <param name="command"></param>
-        /// <param name="info"></param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
         /// <param name="exited"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, ProcessStartInfo info = null, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null)
+        public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null)
         {
-            return RunCommand(command, null, info, outputDataReceived, errorDataReceived, exited);
+            return RunCommand(command, null, outputDataReceived, errorDataReceived, exited);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory"></param>
+        /// <param name="timeoutInMilliseconds"></param>
+        /// <returns>the process Exit Code </returns>
+        public int? RunCommand(string command, string workingDirectory,int timeoutInMilliseconds = int.MaxValue)
+        {
+            return RunCommand(command, workingDirectory,null,null,null,timeoutInMilliseconds);
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory"></param>
+        /// <param name="timeoutInMilliseconds"></param>
+        /// <returns>the process Exit Code </returns>
+        public int? RunCommand(string command, string workingDirectory, System.EventHandler exited, int timeoutInMilliseconds = int.MaxValue)
+        {
+            return RunCommand(command, workingDirectory, null, null, exited, timeoutInMilliseconds);
+        }
 
 
 
@@ -67,25 +90,17 @@ namespace DotNetHelper_Contracts.Tools
         /// 
         /// </summary>
         /// <param name="command">the command to run</param>
-        /// <param name="info"></param>
+        /// <param name="workingDirectory"></param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
         /// <param name="exited"></param>
+        /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory, ProcessStartInfo info = null, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null)
+        public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null, int timeoutInMilliseconds = int.MaxValue)
         {
-            if (info == null)
-            {
-                info = new ProcessStartInfo(CmdLocation, "/c " + command)
-                {
-                    CreateNoWindow = CreateNoWindow,
-                    UseShellExecute = false,
-                    RedirectStandardError = errorDataReceived != null,
-                    RedirectStandardOutput = outputDataReceived != null,
-                    WorkingDirectory = workingDirectory,
-                };
-            }
 
+
+            var info = CreateStartInfo(command, workingDirectory,CreateNoWindow,outputDataReceived,errorDataReceived);
             var process = Process.Start(info);
 
 
@@ -109,11 +124,12 @@ namespace DotNetHelper_Contracts.Tools
 
 
 
-            process?.WaitForExit();
+            process?.WaitForExit(timeoutInMilliseconds);
             var exitcode = process?.ExitCode;
             process?.Close();
             return exitcode;
         }
+
 
         /// <summary>
         /// 
@@ -123,8 +139,9 @@ namespace DotNetHelper_Contracts.Tools
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
         /// <param name="exited"></param>
+        /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(ProcessStartInfo info ,DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null)
+        public int? RunCommand(ProcessStartInfo info ,DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null, int timeoutInMilliseconds = int.MaxValue)
         {
 
             var process = Process.Start(info);
@@ -152,7 +169,7 @@ namespace DotNetHelper_Contracts.Tools
             var msg = process?.StandardOutput.ReadToEnd();
 
 
-            process?.WaitForExit();
+            process?.WaitForExit(timeoutInMilliseconds);
             var exitcode = process?.ExitCode;
             process?.Close();
             return exitcode;

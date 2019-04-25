@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DotNetHelper_Contracts.Tools
+namespace DotNetHelper_CommandLine
 {
     /// <summary>
     /// Helper class for common commands  

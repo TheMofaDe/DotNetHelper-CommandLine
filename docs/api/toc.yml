@@ -1,8 +1,8 @@
 ### YamlMime:TableOfContent
-- uid: DotNetHelper_Contracts.Tools
-  name: DotNetHelper_Contracts.Tools
+- uid: DotNetHelper_CommandLine
+  name: DotNetHelper_CommandLine
   items:
-  - uid: DotNetHelper_Contracts.Tools.CommandPrompt
+  - uid: DotNetHelper_CommandLine.CommandPrompt
     name: CommandPrompt
-  - uid: DotNetHelper_Contracts.Tools.UnixCommands
+  - uid: DotNetHelper_CommandLine.UnixCommands
     name: UnixCommands

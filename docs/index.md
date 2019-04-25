@@ -1,8 +1,9 @@
 # DotNetHelper-CommandLine
 
-A command-line helper class that makes it easy to run commands.
+A command-line helper class that makes it easy to run commands. This library also comes with commonly used 
+command see api docs for examples
 
-## How to use
+## Sample Code
 ```csharp
         static void Main(string[] args)
         {
@@ -26,13 +27,12 @@ A command-line helper class that makes it easy to run commands.
 
     }
 ```
-# Produces
+## Results from sample code
  
 ![alt text][logo]
 
 [logo]: images/codesnippet1.PNG "Code Snippet Output"
 
-[logo]: (images/codesnippet1.PNG) "Code Snippet Output"
 
 ## Targeted .NET Frameworks
     NET452

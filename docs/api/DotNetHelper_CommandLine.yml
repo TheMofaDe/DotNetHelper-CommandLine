@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_CommandLine
+  commentId: N:DotNetHelper_CommandLine
+  id: DotNetHelper_CommandLine
+  children:
+  - DotNetHelper_CommandLine.CommandPrompt
+  - DotNetHelper_CommandLine.UnixCommands
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper_CommandLine
+  nameWithType: DotNetHelper_CommandLine
+  fullName: DotNetHelper_CommandLine
+  type: Namespace
+  assemblies:
+  - DotNetHelper-CommandLine
+references:
+- uid: DotNetHelper_CommandLine.CommandPrompt
+  commentId: T:DotNetHelper_CommandLine.CommandPrompt
+  name: CommandPrompt
+  nameWithType: CommandPrompt
+  fullName: DotNetHelper_CommandLine.CommandPrompt
+- uid: DotNetHelper_CommandLine.UnixCommands
+  commentId: T:DotNetHelper_CommandLine.UnixCommands
+  name: UnixCommands
+  nameWithType: UnixCommands
+  fullName: DotNetHelper_CommandLine.UnixCommands

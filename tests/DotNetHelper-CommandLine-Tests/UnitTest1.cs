@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using DotNetHelper_Contracts.Tools;
+using DotNetHelper_CommandLine;
 using NUnit.Framework;
 
 namespace Tests

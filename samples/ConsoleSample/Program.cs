@@ -1,6 +1,6 @@
-﻿using DotNetHelper_Contracts.Tools;
-using System;
+﻿using System;
 using System.Diagnostics;
+using DotNetHelper_CommandLine;
 
 namespace ConsoleSample
 {
@@ -8,14 +8,10 @@ namespace ConsoleSample
     {
         static void Main(string[] args)
         {
-  
-
                 var cmd = new CommandPrompt();
                 cmd.RunCommand(UnixCommands.Ping("www.google.com"), null, OnDataReceived, ErrorDataReceived, Exited);
                 cmd.RunCommand(UnixCommands.Ping("This is not a valid command"), null, OnDataReceived, ErrorDataReceived, Exited);
-
                 Console.ReadLine();
-
         }
         private static void Exited(object sender, EventArgs e)
         {
