@@ -9,7 +9,7 @@
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/TheMofaDe/DotNetHelper-CommandLine</projectUrl>
     <iconUrl>https://github.com/TheMofaDe/DotNetHelper-CommandLine</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>A command-line helper class that makes it easy to run commands.</description>
     <language>en-US</language>
     <tags>Command prompt line CommandPrompt</tags>
