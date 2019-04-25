@@ -78,24 +78,36 @@ references:
   isSpec: "True"
   fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
   nameWithType: CommandPrompt.RedirectStandardOutput
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
-  nameWithType: CommandPrompt.RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  name: RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
-  nameWithType: CommandPrompt.RunCommand(String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  name: RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
-  nameWithType: CommandPrompt.RunCommand(String, String, ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
+  name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler, System.Int32)
+  nameWithType: CommandPrompt.RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  name: RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
+  name: RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler, System.Int32)
+  nameWithType: CommandPrompt.RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
+  name: RunCommand(String, String, EventHandler, Int32)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_EventHandler_System_Int32_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.EventHandler, System.Int32)
+  nameWithType: CommandPrompt.RunCommand(String, String, EventHandler, Int32)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
+  name: RunCommand(String, String, Int32)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Int32_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.Int32)
+  nameWithType: CommandPrompt.RunCommand(String, String, Int32)
 - uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   name: RunCommand
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_
