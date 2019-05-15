@@ -52,10 +52,10 @@
                           <a href="../index.html" title="Home">Home</a>
                       </li>
                       <li>
-                          <a href="../articles/gettingstarted.md" title="Articles">Articles</a>
+                          <a href="../articles/sample.html" title="Articles">Articles</a>
                       </li>
                       <li>
-                          <a href="../api/DotNetHelper-CommandLine.html" title="API Documentation">API Documentation</a>
+                          <a href="../api/DotNetHelper_CommandLine.html" title="API Documentation">API Documentation</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -123,38 +123,42 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CommandPrompt</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DotNetHelper_CommandLine.html">DotNetHelper_CommandLine</a></h6>
   <h6><strong>Assembly</strong>: DotNetHelper-CommandLine.dll</h6>
   <h5 id="DotNetHelper_CommandLine_CommandPrompt_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CommandPrompt</code></pre>
+    <pre><code class="lang-csharp hljs">public class CommandPrompt : IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -163,7 +167,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.%23ctor(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L16">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L19">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt__ctor_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_Boolean_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)">CommandPrompt(String, Boolean)</h4>
@@ -184,12 +188,101 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cmdLocation</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">hideWindow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.%23ctor(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L33">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt__ctor_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_Boolean_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)">CommandPrompt(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandPrompt(string runAsUser, string cmdLocation = &quot;C:\\windows\\system32\\cmd.exe&quot;, bool hideWindow = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">runAsUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cmdLocation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">hideWindow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.%23ctor(System.String%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L25">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt__ctor_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_String_System_Boolean_" data-uid="DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)">CommandPrompt(String, String, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandPrompt(string runAsUser, string password, string cmdLocation = &quot;C:\\windows\\system32\\cmd.exe&quot;, bool hideWindow = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">runAsUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cmdLocation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">hideWindow</span></td>
         <td></td>
       </tr>
@@ -202,7 +295,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_CreateNoWindow.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L12">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L15">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_CreateNoWindow_" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_CreateNoWindow" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow">CreateNoWindow</h4>
@@ -222,7 +315,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -232,7 +325,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RedirectStandardError.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L14">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L17">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RedirectStandardError_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RedirectStandardError" data-uid="DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError">RedirectStandardError</h4>
@@ -252,7 +345,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +355,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RedirectStandardOutput.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L15">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L18">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RedirectStandardOutput_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RedirectStandardOutput" data-uid="DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput">RedirectStandardOutput</h4>
@@ -282,7 +375,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunAsUser.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunAsUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L12">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt_RunAsUser_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunAsUser*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunAsUser" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunAsUser">RunAsUser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RunAsUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -292,7 +415,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_UseShellExecute.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.UseShellExecute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L13">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L16">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_UseShellExecute_" data-uid="DotNetHelper_CommandLine.CommandPrompt.UseShellExecute*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_UseShellExecute" data-uid="DotNetHelper_CommandLine.CommandPrompt.UseShellExecute">UseShellExecute</h4>
@@ -312,7 +435,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -321,10 +444,57 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_CreateSecurePassword_System_String_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L45">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt_CreateSecurePassword_" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_CreateSecurePassword_System_String_" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)">CreateSecurePassword(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SecureString CreateSecurePassword(string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Security.SecureString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_CreateStartInfo_System_String_System_String_System_Boolean_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.Diagnostics.DataReceivedEventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L35">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L68">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_CreateStartInfo_" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_CreateStartInfo_System_String_System_String_System_Boolean_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_" data-uid="DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)">CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)</h4>
@@ -345,31 +515,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>command to run</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">workingDirectory</span></td>
         <td><p>directory to run command from</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">hideWindow</span></td>
         <td><p>if true will show cmd will show during execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">outputDataReceived</span></td>
         <td><p>event handler for responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">errorDataReceived</span></td>
         <td><p>event handler for error responses return during the execution of the command</p>
 </td>
@@ -386,17 +556,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo">ProcessStartInfo</a></td>
+        <td><span class="xref">System.Diagnostics.ProcessStartInfo</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_Dispose.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L230">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt_Dispose_" data-uid="DotNetHelper_CommandLine.CommandPrompt.Dispose*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_Dispose" data-uid="DotNetHelper_CommandLine.CommandPrompt.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.EventHandler%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L144">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L189">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)">RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)</h4>
@@ -404,7 +589,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null, int timeoutInMilliseconds = 2147483647)</code></pre>
+    <pre><code class="lang-csharp hljs">public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,29 +602,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo">ProcessStartInfo</a></td>
+        <td><span class="xref">System.Diagnostics.ProcessStartInfo</span></td>
         <td><span class="parametername">info</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">outputDataReceived</span></td>
         <td><p>event handler for responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">errorDataReceived</span></td>
         <td><p>event handler for error responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td><span class="parametername">exited</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeoutInMilliseconds</span></td>
         <td></td>
       </tr>
@@ -455,7 +640,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>the process Exit Code</p>
 </td>
       </tr>
@@ -466,7 +651,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.EventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L57">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L92">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)">RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)</h4>
@@ -474,7 +659,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,24 +672,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">command</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">outputDataReceived</span></td>
         <td><p>event handler for responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">errorDataReceived</span></td>
         <td><p>event handler for error responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td><span class="parametername">exited</span></td>
         <td></td>
       </tr>
@@ -520,7 +705,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>the process Exit Code</p>
 </td>
       </tr>
@@ -528,18 +713,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.String%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.EventHandler%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L99">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L122">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
-  <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)">RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)</h4>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)">RunCommand(String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null, int timeoutInMilliseconds = 2147483647)</code></pre>
+    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, string workingDirectory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -552,35 +737,87 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">workingDirectory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.String%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.Diagnostics.DataReceivedEventHandler%2CSystem.EventHandler%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L137">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)">RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>the command to run</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">workingDirectory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">outputDataReceived</span></td>
         <td><p>event handler for responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.datareceivedeventhandler">DataReceivedEventHandler</a></td>
+        <td><span class="xref">System.Diagnostics.DataReceivedEventHandler</span></td>
         <td><span class="parametername">errorDataReceived</span></td>
         <td><p>event handler for error responses return during the execution of the command</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td><span class="parametername">exited</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeoutInMilliseconds</span></td>
         <td></td>
       </tr>
@@ -596,7 +833,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>the process Exit Code</p>
 </td>
       </tr>
@@ -607,7 +844,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_EventHandler_System_Int32_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.String%2CSystem.EventHandler%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L82">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L117">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_EventHandler_System_Int32_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)">RunCommand(String, String, EventHandler, Int32)</h4>
@@ -628,23 +865,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>the command to run</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">workingDirectory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td><span class="parametername">exited</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeoutInMilliseconds</span></td>
         <td></td>
       </tr>
@@ -660,7 +897,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>the process Exit Code</p>
 </td>
       </tr>
@@ -671,7 +908,7 @@
     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L69">View Source</a>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L104">View Source</a>
   </span>
   <a id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand*"></a>
   <h4 id="DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Int32_" data-uid="DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)">RunCommand(String, String, Int32)</h4>
@@ -679,7 +916,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, string workingDirectory, int timeoutInMilliseconds = 2147483647)</code></pre>
+    <pre><code class="lang-csharp hljs">public int? RunCommand(string command, string workingDirectory, int timeoutInMilliseconds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -692,18 +929,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">command</span></td>
         <td><p>the command to run</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">workingDirectory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeoutInMilliseconds</span></td>
         <td></td>
       </tr>
@@ -719,12 +956,53 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>the process Exit Code</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt_UpdateDefaultUserAndPassword_System_String_System_String_.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L40">View Source</a>
+  </span>
+  <a id="DotNetHelper_CommandLine_CommandPrompt_UpdateDefaultUserAndPassword_" data-uid="DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword*"></a>
+  <h4 id="DotNetHelper_CommandLine_CommandPrompt_UpdateDefaultUserAndPassword_System_String_System_String_" data-uid="DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)">UpdateDefaultUserAndPassword(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateDefaultUserAndPassword(string runAsUser, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">runAsUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
 </article>
           </div>
           
@@ -736,7 +1014,7 @@
                     <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/new/master/apiSpec/new?filename=DotNetHelper_CommandLine_CommandPrompt.md&amp;value=---%0Auid%3A%20DotNetHelper_CommandLine.CommandPrompt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/src/DotNetHelper-CommandLine/CommandPrompt.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

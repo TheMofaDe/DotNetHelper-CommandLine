@@ -19,6 +19,18 @@ references:
   commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)
   fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.Boolean)
   nameWithType: CommandPrompt.CommandPrompt(String, Boolean)
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
+  name: CommandPrompt(String, String, Boolean)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_Boolean_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.String, System.Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, String, Boolean)
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
+  name: CommandPrompt(String, String, String, Boolean)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt__ctor_System_String_System_String_System_String_System_Boolean_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.String, System.String, System.Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, String, String, Boolean)
 - uid: DotNetHelper_CommandLine.CommandPrompt.#ctor*
   name: CommandPrompt
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt__ctor_
@@ -39,6 +51,19 @@ references:
   isSpec: "True"
   fullName: DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   nameWithType: CommandPrompt.CreateNoWindow
+- uid: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  name: CreateSecurePassword(String)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_CreateSecurePassword_System_String_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  nameWithType: CommandPrompt.CreateSecurePassword(String)
+- uid: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword*
+  name: CreateSecurePassword
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_CreateSecurePassword_
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword
+  isSpec: "True"
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword
+  nameWithType: CommandPrompt.CreateSecurePassword
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
   name: CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_CreateStartInfo_System_String_System_String_System_Boolean_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_
@@ -52,6 +77,19 @@ references:
   isSpec: "True"
   fullName: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo
   nameWithType: CommandPrompt.CreateStartInfo
+- uid: DotNetHelper_CommandLine.CommandPrompt.Dispose
+  name: Dispose()
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_Dispose
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.Dispose
+  fullName: DotNetHelper_CommandLine.CommandPrompt.Dispose()
+  nameWithType: CommandPrompt.Dispose()
+- uid: DotNetHelper_CommandLine.CommandPrompt.Dispose*
+  name: Dispose
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_Dispose_
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.Dispose
+  isSpec: "True"
+  fullName: DotNetHelper_CommandLine.CommandPrompt.Dispose
+  nameWithType: CommandPrompt.Dispose
 - uid: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
   name: RedirectStandardError
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RedirectStandardError
@@ -78,6 +116,19 @@ references:
   isSpec: "True"
   fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
   nameWithType: CommandPrompt.RedirectStandardOutput
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  name: RunAsUser
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunAsUser
+  commentId: P:DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  nameWithType: CommandPrompt.RunAsUser
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunAsUser*
+  name: RunAsUser
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunAsUser_
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  isSpec: "True"
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  nameWithType: CommandPrompt.RunAsUser
 - uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_Diagnostics_ProcessStartInfo_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_
@@ -90,6 +141,12 @@ references:
   commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
   fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
   nameWithType: CommandPrompt.RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
+  name: RunCommand(String, String)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String)
+  nameWithType: CommandPrompt.RunCommand(String, String)
 - uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   name: RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_RunCommand_System_String_System_String_System_Diagnostics_DataReceivedEventHandler_System_Diagnostics_DataReceivedEventHandler_System_EventHandler_System_Int32_
@@ -115,6 +172,19 @@ references:
   isSpec: "True"
   fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand
   nameWithType: CommandPrompt.RunCommand
+- uid: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
+  name: UpdateDefaultUserAndPassword(String, String)
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_UpdateDefaultUserAndPassword_System_String_System_String_
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String, System.String)
+  nameWithType: CommandPrompt.UpdateDefaultUserAndPassword(String, String)
+- uid: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword*
+  name: UpdateDefaultUserAndPassword
+  href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_UpdateDefaultUserAndPassword_
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword
+  isSpec: "True"
+  fullName: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword
+  nameWithType: CommandPrompt.UpdateDefaultUserAndPassword
 - uid: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
   name: UseShellExecute
   href: api/DotNetHelper_CommandLine.CommandPrompt.html#DotNetHelper_CommandLine_CommandPrompt_UseShellExecute

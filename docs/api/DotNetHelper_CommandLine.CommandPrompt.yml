@@ -6,15 +6,22 @@ items:
   parent: DotNetHelper_CommandLine
   children:
   - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)
+  - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
+  - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
   - DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
+  - DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
   - DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.Dispose
   - DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
   - DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
+  - DotNetHelper_CommandLine.CommandPrompt.RunAsUser
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
+  - DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
   - DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
   langs:
   - csharp
@@ -30,17 +37,21 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CommandPrompt
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   summary: "\nA command-line helper class that makes it easy to run commands.\n"
   example: []
   syntax:
-    content: public class CommandPrompt
-    content.vb: Public Class CommandPrompt
+    content: 'public class CommandPrompt : IDisposable'
+    content.vb: >-
+      Public Class CommandPrompt
+          Implements IDisposable
   inheritance:
   - System.Object
+  implements:
+  - System.IDisposable
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -55,6 +66,41 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  commentId: P:DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  id: RunAsUser
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunAsUser
+  nameWithType: CommandPrompt.RunAsUser
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: RunAsUser
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public string RunAsUser { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RunAsUser As String
+  overload: DotNetHelper_CommandLine.CommandPrompt.RunAsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   commentId: P:DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   id: CreateNoWindow
@@ -73,7 +119,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateNoWindow
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -108,7 +154,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: UseShellExecute
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -143,7 +189,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RedirectStandardError
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -178,7 +224,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RedirectStandardOutput
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -213,7 +259,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: .ctor
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -226,6 +272,152 @@ items:
       type: System.Boolean
     content.vb: Public Sub New(cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
   overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.String,System.Boolean)'
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CommandPrompt(String, String, String, Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, String, String, Boolean)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: .ctor
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 24
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public CommandPrompt(string runAsUser, string password, string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
+    parameters:
+    - id: runAsUser
+      type: System.String
+    - id: password
+      type: System.String
+    - id: cmdLocation
+      type: System.String
+    - id: hideWindow
+      type: System.Boolean
+    content.vb: Public Sub New(runAsUser As String, password As String, cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+  overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean)'
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CommandPrompt(String, String, Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(String, String, Boolean)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: .ctor
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 32
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public CommandPrompt(string runAsUser, string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
+    parameters:
+    - id: runAsUser
+      type: System.String
+    - id: cmdLocation
+      type: System.String
+    - id: hideWindow
+      type: System.Boolean
+    content.vb: Public Sub New(runAsUser As String, cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+  overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
+  id: UpdateDefaultUserAndPassword(System.String,System.String)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: UpdateDefaultUserAndPassword(String, String)
+  nameWithType: CommandPrompt.UpdateDefaultUserAndPassword(String, String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: UpdateDefaultUserAndPassword
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 39
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public void UpdateDefaultUserAndPassword(string runAsUser, string password)
+    parameters:
+    - id: runAsUser
+      type: System.String
+    - id: password
+      type: System.String
+    content.vb: Public Sub UpdateDefaultUserAndPassword(runAsUser As String, password As String)
+  overload: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  id: CreateSecurePassword(System.String)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: CreateSecurePassword(String)
+  nameWithType: CommandPrompt.CreateSecurePassword(String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: CreateSecurePassword
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 44
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public SecureString CreateSecurePassword(string password)
+    parameters:
+    - id: password
+      type: System.String
+    return:
+      type: System.Security.SecureString
+    content.vb: Public Function CreateSecurePassword(password As String) As SecureString
+  overload: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -248,7 +440,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateStartInfo
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 34
+    startLine: 67
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -299,14 +491,14 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 56
+    startLine: 91
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   summary: "\n\n"
   example: []
   syntax:
-    content: public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null)
+    content: public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited)
     parameters:
     - id: command
       type: System.String
@@ -323,7 +515,7 @@ items:
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing) As Integer?
+    content.vb: Public Function RunCommand(command As String, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
@@ -347,14 +539,14 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 68
+    startLine: 103
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   summary: "\n\n"
   example: []
   syntax:
-    content: public int? RunCommand(string command, string workingDirectory, int timeoutInMilliseconds = 2147483647)
+    content: public int? RunCommand(string command, string workingDirectory, int timeoutInMilliseconds)
     parameters:
     - id: command
       type: System.String
@@ -368,7 +560,7 @@ items:
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String, timeoutInMilliseconds As Integer) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
@@ -392,7 +584,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 81
+    startLine: 116
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -421,6 +613,43 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
+  id: RunCommand(System.String,System.String)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunCommand(String, String)
+  nameWithType: CommandPrompt.RunCommand(String, String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: RunCommand
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 121
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public int? RunCommand(string command, string workingDirectory)
+    parameters:
+    - id: command
+      type: System.String
+    - id: workingDirectory
+      type: System.String
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String) As Integer?
+  overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
   id: RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
@@ -439,14 +668,14 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 98
+    startLine: 136
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   summary: "\n\n"
   example: []
   syntax:
-    content: public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null, int timeoutInMilliseconds = 2147483647)
+    content: public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)
     parameters:
     - id: command
       type: System.String
@@ -469,7 +698,7 @@ items:
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler, timeoutInMilliseconds As Integer = 2147483647) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
@@ -493,14 +722,14 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 143
+    startLine: 188
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   summary: "\n\n"
   example: []
   syntax:
-    content: public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, EventHandler exited = null, int timeoutInMilliseconds = 2147483647)
+    content: public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)
     parameters:
     - id: info
       type: System.Diagnostics.ProcessStartInfo
@@ -520,8 +749,40 @@ items:
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(info As ProcessStartInfo, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing, exited As EventHandler = Nothing, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(info As ProcessStartInfo, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler, timeoutInMilliseconds As Integer = 2147483647) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.Dispose
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.Dispose
+  id: Dispose
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: CommandPrompt.Dispose()
+  fullName: DotNetHelper_CommandLine.CommandPrompt.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: Dispose
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 229
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: DotNetHelper_CommandLine.CommandPrompt.Dispose*
+  implements:
+  - System.IDisposable.Dispose
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -539,6 +800,13 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -824,6 +1092,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunAsUser*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+  name: RunAsUser
+  nameWithType: CommandPrompt.RunAsUser
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunAsUser
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   name: CreateNoWindow
@@ -856,13 +1136,29 @@ references:
   name: CommandPrompt
   nameWithType: CommandPrompt.CommandPrompt
   fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword
+  name: UpdateDefaultUserAndPassword
+  nameWithType: CommandPrompt.UpdateDefaultUserAndPassword
+  fullName: DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword
+- uid: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword
+  name: CreateSecurePassword
+  nameWithType: CommandPrompt.CreateSecurePassword
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword
+- uid: System.Security.SecureString
+  commentId: T:System.Security.SecureString
+  parent: System.Security
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: SecureString
+  nameWithType: SecureString
+  fullName: System.Security.SecureString
+- uid: System.Security
+  commentId: N:System.Security
+  isExternal: true
+  name: System.Security
+  nameWithType: System.Security
+  fullName: System.Security
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo
   name: CreateStartInfo
@@ -990,3 +1286,39 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: DotNetHelper_CommandLine.CommandPrompt.Dispose*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.Dispose
+  name: Dispose
+  nameWithType: CommandPrompt.Dispose
+  fullName: DotNetHelper_CommandLine.CommandPrompt.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

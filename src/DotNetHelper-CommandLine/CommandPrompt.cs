@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Security;
 
 namespace DotNetHelper_CommandLine
 {
     /// <summary>
     /// A command-line helper class that makes it easy to run commands.
     /// </summary>
-    public class CommandPrompt
+    public class CommandPrompt : IDisposable
     {
+        public string RunAsUser { get; private set; }
+        private SecureString Password { get;  set; }
         private string CmdLocation { get; }
         public bool CreateNoWindow { get; set; } = false;
         public bool UseShellExecute { get; set; } = false;
@@ -17,8 +20,38 @@ namespace DotNetHelper_CommandLine
         {
             CmdLocation = cmdLocation;
             CreateNoWindow = hideWindow;
+        }
 
+        public CommandPrompt(string runAsUser, string password, string cmdLocation = @"C:\windows\system32\cmd.exe", bool hideWindow = true)
+        {
+            RunAsUser = runAsUser;
+            Password = CreateSecurePassword(password);
+            CmdLocation = cmdLocation;
+            CreateNoWindow = hideWindow;
+        }
 
+        public CommandPrompt(string runAsUser, string cmdLocation = @"C:\windows\system32\cmd.exe", bool hideWindow = true)
+        {
+            RunAsUser = runAsUser; ;
+            CmdLocation = cmdLocation;
+            CreateNoWindow = hideWindow;
+        }
+
+        public void UpdateDefaultUserAndPassword(string runAsUser, string password)
+        {
+            RunAsUser = runAsUser;
+            Password = CreateSecurePassword(password);
+        }
+        public SecureString CreateSecurePassword(string password)
+        {
+            if (password == null) return null;
+            var securePassword = new SecureString();
+            foreach (var c in password.ToCharArray())
+            {
+                securePassword.AppendChar(c);
+            }
+            securePassword.MakeReadOnly();
+            return securePassword;
         }
 
 
@@ -41,6 +74,8 @@ namespace DotNetHelper_CommandLine
                     WorkingDirectory = workingDirectory,
                     RedirectStandardError = errorDataReceived != null,
                     RedirectStandardOutput = outputDataReceived != null,
+                    Password = Password,
+                    UserName = RunAsUser
                 };
             return info;
         }
@@ -54,7 +89,7 @@ namespace DotNetHelper_CommandLine
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
         /// <param name="exited"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null)
+        public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived , EventHandler exited )
         {
             return RunCommand(command, null, outputDataReceived, errorDataReceived, exited);
         }
@@ -66,7 +101,7 @@ namespace DotNetHelper_CommandLine
         /// <param name="workingDirectory"></param>
         /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory,int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(string command, string workingDirectory,int timeoutInMilliseconds)
         {
             return RunCommand(command, workingDirectory,null,null,null,timeoutInMilliseconds);
         }
@@ -79,12 +114,15 @@ namespace DotNetHelper_CommandLine
         /// <param name="workingDirectory"></param>
         /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory, System.EventHandler exited, int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(string command, string workingDirectory, EventHandler exited, int timeoutInMilliseconds = int.MaxValue)
         {
             return RunCommand(command, workingDirectory, null, null, exited, timeoutInMilliseconds);
         }
 
-
+        public int? RunCommand(string command, string workingDirectory)
+        {
+            return RunCommand(command, workingDirectory, null, null, null);
+        }
 
         /// <summary>
         /// 
@@ -96,7 +134,7 @@ namespace DotNetHelper_CommandLine
         /// <param name="exited"></param>
         /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null, int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived, System.EventHandler exited , int timeoutInMilliseconds = int.MaxValue)
         {
 
 
@@ -122,6 +160,13 @@ namespace DotNetHelper_CommandLine
                 }
             }
 
+            if (exited != null)
+            {
+                if (process != null)
+                {
+                    process.Exited += exited;
+                }
+            }
 
 
             process?.WaitForExit(timeoutInMilliseconds);
@@ -141,7 +186,7 @@ namespace DotNetHelper_CommandLine
         /// <param name="exited"></param>
         /// <param name="timeoutInMilliseconds"></param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(ProcessStartInfo info ,DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null, System.EventHandler exited = null, int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(ProcessStartInfo info ,DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived  ,EventHandler exited , int timeoutInMilliseconds = int.MaxValue)
         {
 
             var process = Process.Start(info);
@@ -165,8 +210,15 @@ namespace DotNetHelper_CommandLine
                 }
             }
 
-            var err = process?.StandardError.ReadToEnd();
-            var msg = process?.StandardOutput.ReadToEnd();
+            if (exited != null)
+            {
+                if (process != null)
+                {
+                    process.Exited += exited;
+                }
+            }
+            // var err = process?.StandardError.ReadToEnd();
+            // var msg = process?.StandardOutput.ReadToEnd();
 
 
             process?.WaitForExit(timeoutInMilliseconds);
@@ -175,5 +227,9 @@ namespace DotNetHelper_CommandLine
             return exitcode;
         }
 
+        public void Dispose()
+        {
+            
+        }
     }
 }

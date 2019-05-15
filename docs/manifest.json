@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Business/TheMoFaDe/Code/TheMofaDe/DotNetHelper-CommandLine/docs",
+  "source_base_path": "D:/Code/Github/TheMofaDe/DotNetHelper-CommandLine/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.CommandPrompt.html",
-          "hash": "SLVxXWMhtmprSf/geP4W2Q=="
+          "hash": "m5Y8w6xvqALD/V5ed66CNg=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.UnixCommands.html",
-          "hash": "oCrFpPXcB1ON9Njb4TfHoA=="
+          "hash": "Pk04QdbfsBm9IZ+ri30StA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,19 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.html",
-          "hash": "OodqZKcbGBPrcZbUI+oatg=="
+          "hash": "ux5llgpwZQHbsmP3fvHFXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sample.html",
+          "hash": "p40woxIO+aW7kvc07EMo7Q=="
         }
       },
       "is_incremental": false,
@@ -54,7 +66,19 @@
       "output": {
         "resource": {
           "relative_path": "images/codesnippet1.PNG",
-          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/codesnippet1.PNG"
+          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/codesnippet1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png",
+          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/icon.png"
         }
       },
       "is_incremental": false,
@@ -66,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "1IoWsLOwNer9/+IHZuKv4g=="
+          "hash": "8bQw1qMxBa+jUJDb0XAe3Q=="
         }
       },
       "is_incremental": false,
@@ -78,7 +102,7 @@
       "output": {
         "resource": {
           "relative_path": "langwordmapping/langwordMapping.yml",
-          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/langwordmapping/langwordMapping.yml"
+          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/langwordmapping/langwordMapping.yml"
         }
       },
       "is_incremental": false,
@@ -88,10 +112,12 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -101,24 +127,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 1
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
         }
       }
     },

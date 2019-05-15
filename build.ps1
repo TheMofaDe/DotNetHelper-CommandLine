@@ -128,7 +128,6 @@ if($FoundDotNetCliVersion -ne $DotNetVersion) {
         & $InstallPath\dotnet-install.ps1 -Channel $DotNetChannel -Version $DotNetVersion -InstallDir $InstallPath;
     }
 
-
     Remove-PathVariable "$InstallPath"
     $env:PATH = "$InstallPath;$env:PATH"
 }

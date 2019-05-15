@@ -11,6 +11,7 @@ namespace ConsoleSample
                 var cmd = new CommandPrompt();
                 cmd.RunCommand(UnixCommands.Ping("www.google.com"), null, OnDataReceived, ErrorDataReceived, Exited);
                 cmd.RunCommand(UnixCommands.Ping("This is not a valid command"), null, OnDataReceived, ErrorDataReceived, Exited);
+
                 Console.ReadLine();
         }
         private static void Exited(object sender, EventArgs e)
