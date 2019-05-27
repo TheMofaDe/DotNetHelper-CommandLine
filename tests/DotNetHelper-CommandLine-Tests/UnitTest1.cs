@@ -43,6 +43,58 @@ namespace Tests
  
         }
 
+        [Test]
+        public void Test_RunCommand_ReturnsMessage()
+        {
+            var cmd = new CommandPrompt(false);
+            var command = $"echo BRO";
+            var hasReceivedMessage = false;
+            cmd.RunCommand(command
+                , delegate(object sender, DataReceivedEventArgs args)
+                {
+                    Console.WriteLine(args.Data);
+                    if (args.Data?.Equals("BRO") == true)
+                        hasReceivedMessage = true;
+                }
+                , delegate(object sender, DataReceivedEventArgs args)
+                {
+                    Console.WriteLine(args.Data);
+                }
+                , delegate(object sender, EventArgs args)
+                {
+                    Console.WriteLine("Exit");
+                    Assert.IsTrue(hasReceivedMessage, "Didn't Receive message from running command.");
+                } );
+          
+        }
+
+        [Test]
+        [Ignore("// MUST HAVE LOCAL ACCOUNT WITH THIS USERNAME AND PASSWORD")]
+        public void Test_RunCommand_WithUsernameAndPassword()
+        {
+            var cmd = new CommandPrompt("Administrator1","Password@123",false); 
+            var command = $"echo BRO";
+            var hasReceivedMessage = false;
+            cmd.RunCommand(command
+                , delegate (object sender, DataReceivedEventArgs args)
+                {
+                    Console.WriteLine(args.Data);
+                    if (args.Data?.Equals("BRO") == true)
+                        hasReceivedMessage = true;
+                }
+                , delegate (object sender, DataReceivedEventArgs args)
+                {
+                    Console.WriteLine(args.Data);
+                }
+                , delegate (object sender, EventArgs args)
+                {
+                    Console.WriteLine("Exit");
+                    Assert.IsTrue(hasReceivedMessage, "Didn't Receive message from running command.");
+                });
+
+        }
+
+       
 
 
 
