@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
+#if NETSTANDARD
+using System.Runtime.InteropServices;
+#endif
 using System.Security;
 
 namespace DotNetHelper_CommandLine
@@ -12,11 +14,35 @@ namespace DotNetHelper_CommandLine
     {
         public string RunAsUser { get; private set; }
         private SecureString Password { get;  set; }
-        private string CmdLocation { get; } = @"C:\windows\system32\cmd.exe";
+
+        public TimeSpan TimeOut { get; set; } = TimeSpan.FromMinutes(20);
+        private string CmdLocation
+        {
+            get
+            {
+#if NETSTANDARD
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    return @"/bin/bash";
+#endif
+                return @"C:\windows\system32\cmd.exe";
+            }
+        }
+
+        private string Argument
+        {
+            get
+            {
+#if NETSTANDARD
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    return @"-c ";
+#endif
+                return @"/c ";
+            }
+        }
+
         public bool CreateNoWindow { get; set; } = false;
-        public bool UseShellExecute { get; set; } = false;
-        public bool RedirectStandardError { get; set; }
-        public bool RedirectStandardOutput { get; set; }
+
+
         public CommandPrompt()
         {
             CreateNoWindow = false;
@@ -35,11 +61,22 @@ namespace DotNetHelper_CommandLine
         }
 
    
+        /// <summary>
+        /// Updates the user & password to run commands with
+        /// </summary>
+        /// <param name="runAsUser"></param>
+        /// <param name="password"></param>
         public void UpdateDefaultUserAndPassword(string runAsUser, string password)
         {
             RunAsUser = runAsUser;
             Password = CreateSecurePassword(password);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public SecureString CreateSecurePassword(string password)
         {
             if (password == null) return null;
@@ -56,20 +93,18 @@ namespace DotNetHelper_CommandLine
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="command">command to run</param>
-        /// <param name="workingDirectory">directory to run command from </param>
-        /// <param name="hideWindow">if true will show cmd will show during execution of the command </param>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
-        /// <returns></returns>
-
-        public ProcessStartInfo CreateStartInfo(string command, string workingDirectory,bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
+        /// <returns>a new instance of ProcessStartInfo </returns>
+        private ProcessStartInfo CreateStartInfo(string command, string workingDirectory,bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
         {
-            var info = new ProcessStartInfo(CmdLocation, "/c " + command)
+            var info = new ProcessStartInfo(CmdLocation, Argument + command)
                 {
                     CreateNoWindow = hideWindow,
                     UseShellExecute = false,
-                    WorkingDirectory = workingDirectory ,
+                    WorkingDirectory = workingDirectory, // defaults  $@"./"
                     RedirectStandardError = errorDataReceived != null,
                     RedirectStandardOutput = outputDataReceived != null,
                     Password = Password,
@@ -79,95 +114,66 @@ namespace DotNetHelper_CommandLine
             return info;
         }
 
-
         /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="command">command to run</param>
-        /// <param name="workingDirectory">directory to run command from </param>
-        /// <param name="hideWindow">if true will show cmd will show during execution of the command </param>
-        /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
-        /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
-        /// <returns></returns>
-
-        public ProcessStartInfo CreateStartInfo(string command, bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
-        {
-            var info = new ProcessStartInfo(CmdLocation, "/c " + command)
-            {
-                CreateNoWindow = hideWindow,
-                UseShellExecute = false,
-                WorkingDirectory = $@"./",
-                RedirectStandardError = errorDataReceived != null,
-                RedirectStandardOutput = outputDataReceived != null,
-                Password = Password,
-                UserName = RunAsUser,
-                Verb = string.IsNullOrEmpty(RunAsUser) ? null : "runas",
-            };
-            return info;
-        }
-
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="command"></param>
-        /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
-        /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
-        /// <param name="exited"></param>
-        /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived , EventHandler exited )
-        {
-            return RunCommand(command, $@"./", outputDataReceived, errorDataReceived, exited);
-        }
-
-        /// <summary>
-        /// 
+        /// Starts a new instance of a command terminal and runs the specified command
         /// </summary>
         /// <param name="command">the command to run</param>
-        /// <param name="workingDirectory"></param>
-        /// <param name="timeoutInMilliseconds"></param>
+        /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
+        /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
+        /// <param name="exited">Occurs when the process exits</param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory,int timeoutInMilliseconds)
+        public int? RunCommand(string command, EventHandler exited, DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived  )
         {
-            return RunCommand(command, workingDirectory,null,null,null,timeoutInMilliseconds);
+            return RunCommand(command, $@"./", exited, outputDataReceived, errorDataReceived);
         }
-
 
         /// <summary>
-        /// 
+        /// Starts a new instance of a command terminal and runs the specified command
         /// </summary>
         /// <param name="command">the command to run</param>
-        /// <param name="workingDirectory"></param>
-        /// <param name="timeoutInMilliseconds"></param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
+        /// <param name="exited">Occurs when the process exits</param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory, EventHandler exited, int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(string command, string workingDirectory, EventHandler exited)
         {
-            return RunCommand(command, workingDirectory, null, null, exited, timeoutInMilliseconds);
+            return RunCommand(command, workingDirectory, exited, null, null);
         }
 
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
+        /// <returns>the process Exit Code </returns>
         public int? RunCommand(string command, string workingDirectory)
         {
             return RunCommand(command, workingDirectory, null, null, null);
         }
 
         /// <summary>
-        /// 
+        /// Starts a new instance of a command terminal and runs the specified command
         /// </summary>
         /// <param name="command">the command to run</param>
-        /// <param name="workingDirectory"></param>
+        /// <returns>the process Exit Code </returns>
+        public int? RunCommand(string command)
+        {
+            return RunCommand(command, null, null, null, null);
+        }
+
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
-        /// <param name="exited"></param>
-        /// <param name="timeoutInMilliseconds"></param>
+        /// <param name="exited">Occurs when the process exits</param>
         /// <returns>the process Exit Code </returns>
-        public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived, System.EventHandler exited , int timeoutInMilliseconds = int.MaxValue)
+        public int? RunCommand(string command, string workingDirectory, EventHandler exited , DataReceivedEventHandler outputDataReceived , DataReceivedEventHandler errorDataReceived)
         {
-
 
             var info = CreateStartInfo(command, workingDirectory,CreateNoWindow,outputDataReceived,errorDataReceived);
             var process = Process.Start(info);
-
 
             if (outputDataReceived != null)
             {
@@ -195,28 +201,90 @@ namespace DotNetHelper_CommandLine
                 }
             }
 
-
-            process?.WaitForExit(timeoutInMilliseconds);
+            process?.WaitForExit(int.Parse(TimeOut.TotalMilliseconds.ToString()));
             var exitcode = process?.ExitCode;
             process?.Close();
             return exitcode;
         }
 
 
+
+
         /// <summary>
-        /// 
+        /// Starts a new instance of a command terminal and runs the specified command
         /// </summary>
-        /// <param name="command"></param>
-        /// <param name="info"></param>
+        /// <param name="command">the command to run</param>
         /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
         /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
-        /// <param name="exited"></param>
-        /// <param name="timeoutInMilliseconds"></param>
-        /// <returns>the process Exit Code </returns>
-        public int? StartProcess(ProcessStartInfo info ,EventHandler exited , int timeoutInMilliseconds = int.MaxValue)
+        /// <param name="exited">Occurs when the process exits</param>
+        /// <returns>the process </returns>
+        public Process GetProcess(string command, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
         {
+            return GetProcess(command, $@"./", exited, outputDataReceived, errorDataReceived);
+        }
 
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
+        /// <param name="exited">Occurs when the process exits</param>
+        /// <returns>the process  </returns>
+        public Process GetProcess(string command, string workingDirectory, EventHandler exited)
+        {
+            return GetProcess(command, workingDirectory, exited, null, null);
+        }
+
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
+        /// <returns>the process </returns>
+        public Process GetProcess(string command, string workingDirectory)
+        {
+            return GetProcess(command, workingDirectory, null, null, null);
+        }
+
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <returns>the process </returns>
+        public Process GetProcess(string command)
+        {
+            return GetProcess(command, null, null, null, null);
+        }
+
+        /// <summary>
+        /// Starts a new instance of a command terminal and runs the specified command
+        /// </summary>
+        /// <param name="command">the command to run</param>
+        /// <param name="workingDirectory">sets the working directory for the command to be run</param>
+        /// <param name="outputDataReceived">event handler for responses return during the execution of the command</param>
+        /// <param name="errorDataReceived">event handler for error responses return during the execution of the command</param>
+        /// <param name="exited">Occurs when the process exits</param>
+        /// <returns>the process </returns>
+        public Process GetProcess(string command, string workingDirectory, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
+        {
+            var info = CreateStartInfo(command, workingDirectory, CreateNoWindow, outputDataReceived, errorDataReceived);
             var process = Process.Start(info);
+            if (outputDataReceived != null)
+            {
+                if (process != null)
+                {
+                    process.OutputDataReceived += outputDataReceived;
+                    process.BeginOutputReadLine();
+                }
+            }
+            if (errorDataReceived != null)
+            {
+                if (process != null)
+                {
+                    process.ErrorDataReceived += errorDataReceived;
+                    process.BeginErrorReadLine();
+                }
+            }
             if (exited != null)
             {
                 if (process != null)
@@ -224,16 +292,16 @@ namespace DotNetHelper_CommandLine
                     process.Exited += exited;
                 }
             }
-
-            process?.WaitForExit(timeoutInMilliseconds);
-            var exitcode = process?.ExitCode;
-            process?.Close();
-            return exitcode;
+            process?.WaitForExit(int.Parse(TimeOut.TotalMilliseconds.ToString()));
+            return process;
         }
+
+
 
         public void Dispose()
         {
-            
+            RunAsUser = null;
+            Password?.Clear();
         }
     }
 }

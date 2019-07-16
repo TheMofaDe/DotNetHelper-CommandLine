@@ -8,19 +8,19 @@
     <title>DotNetHelper-CommandLine | DotNetHelper-CommandLine </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DotNetHelper-CommandLine | DotNetHelper-CommandLine ">
-    <meta name="generator" content="docfx 2.41.0.0">
+    <meta name="generator" content="docfx 2.43.1.0">
     
     <link rel="shortcut icon" href="logo/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc">
-    <meta property="docfx:tocrel" content="toc">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="">
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -50,10 +50,13 @@
                           <a href="index.html" title="Home">Home</a>
                       </li>
                       <li>
-                          <a href="articles/sample.html" title="Articles">Articles</a>
+                          <a href="api/DotNetHelper_CommandLine.html" title="API">API</a>
                       </li>
                       <li>
-                          <a href="api/DotNetHelper_CommandLine.html" title="API Documentation">API Documentation</a>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/CHANGELOG.md" title="Change Log">Change Log</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine" title="Github">Github</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -83,14 +86,19 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="dotnethelper-commandline">DotNetHelper-CommandLine</h1>
 
-<p>A command-line helper class that makes it easy to run commands. This library also comes with commonly used
-command see api docs for examples</p>
-<h2 id="sample-code">Sample Code</h2>
+<h4 id="a-cross-platform-command-line-helper-class-that-makes-it-easy-to-run-commands-this-library-also-comes-with-commonly-used-command-see-api-docs-for-examples"><em>A cross-platform command-line helper class that makes it easy to run commands. This library also comes with commonly used command see api docs for examples.</em></h4>
+<p>|| <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine"><strong>View on Github</strong></a> ||</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Runs terminal commands</li>
+<li>Works on linux &amp; windows</li>
+</ul>
+<h2 id="how-to-use">How to use</h2>
 <pre><code class="lang-csharp">        static void Main(string[] args)
         {
                 var cmd = new CommandPrompt();
-                cmd.RunCommand(UnixCommands.Ping(&quot;www.google.com&quot;), null, OnDataReceived, ErrorDataReceived, Exited);
-                cmd.RunCommand(UnixCommands.Ping(&quot;This is not a valid command&quot;), null, OnDataReceived, ErrorDataReceived, Exited);
+                var exitCode = cmd.RunCommand(&quot;ping www.google.com&quot;), null,Exited, OnDataReceived, ErrorDataReceived); // RETURNS 0
+                var exitCode1 = cmd.RunCommand(&quot;ping This is not a valid command&quot;), null, OnDataReceived, ErrorDataReceived, Exited); // RETURN 1
                 Console.ReadLine();
         }
         private static void Exited(object sender, EventArgs e)
@@ -105,15 +113,12 @@ command see api docs for examples</p>
         {
             Console.WriteLine(&quot;received data : &quot; + args.Data);
         }
-
     }
 </code></pre>
 <h2 id="results-from-sample-code">Results from sample code</h2>
 <p><img src="images/codesnippet1.PNG" alt="alt text" title="Code Snippet Output"></p>
-<h2 id="targeted-net-frameworks">Targeted .NET Frameworks</h2>
-<pre><code>NET452
-NETSTANDARD2.0
-</code></pre>
+<!-- Links. -->
+<!-- Documentation Links. -->
 </article>
           </div>
           
@@ -141,7 +146,7 @@ NETSTANDARD2.0
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright � 2019 Joseph McNeal Jr
+            Copyright © 2019  <strong>Joseph McNeal Jr</strong>
             
           </div>
         </div>

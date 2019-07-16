@@ -5,24 +5,25 @@ items:
   id: CommandPrompt
   parent: DotNetHelper_CommandLine
   children:
-  - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)
+  - DotNetHelper_CommandLine.CommandPrompt.#ctor
+  - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.Boolean)
   - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.Boolean)
-  - DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
   - DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   - DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword(System.String)
-  - DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
   - DotNetHelper_CommandLine.CommandPrompt.Dispose
-  - DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-  - DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
+  - DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String)
+  - DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String)
+  - DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
   - DotNetHelper_CommandLine.CommandPrompt.RunAsUser
-  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String)
+  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
   - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String)
-  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
-  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
+  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  - DotNetHelper_CommandLine.CommandPrompt.TimeOut
   - DotNetHelper_CommandLine.CommandPrompt.UpdateDefaultUserAndPassword(System.String,System.String)
-  - DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
   langs:
   - csharp
   - vb
@@ -37,7 +38,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CommandPrompt
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -84,7 +85,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunAsUser
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -101,6 +102,41 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: DotNetHelper_CommandLine.CommandPrompt.TimeOut
+  commentId: P:DotNetHelper_CommandLine.CommandPrompt.TimeOut
+  id: TimeOut
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: TimeOut
+  nameWithType: CommandPrompt.TimeOut
+  fullName: DotNetHelper_CommandLine.CommandPrompt.TimeOut
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: TimeOut
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 17
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  syntax:
+    content: public TimeSpan TimeOut { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property TimeOut As TimeSpan
+  overload: DotNetHelper_CommandLine.CommandPrompt.TimeOut*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   commentId: P:DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   id: CreateNoWindow
@@ -119,7 +155,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateNoWindow
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 14
+    startLine: 42
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -136,121 +172,16 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
-  commentId: P:DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
-  id: UseShellExecute
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor
+  id: '#ctor'
   parent: DotNetHelper_CommandLine.CommandPrompt
   langs:
   - csharp
   - vb
-  name: UseShellExecute
-  nameWithType: CommandPrompt.UseShellExecute
-  fullName: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
-  type: Property
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: UseShellExecute
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 15
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  syntax:
-    content: public bool UseShellExecute { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property UseShellExecute As Boolean
-  overload: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-  commentId: P:DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-  id: RedirectStandardError
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: RedirectStandardError
-  nameWithType: CommandPrompt.RedirectStandardError
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-  type: Property
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: RedirectStandardError
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 16
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  syntax:
-    content: public bool RedirectStandardError { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property RedirectStandardError As Boolean
-  overload: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
-  commentId: P:DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
-  id: RedirectStandardOutput
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: RedirectStandardOutput
-  nameWithType: CommandPrompt.RedirectStandardOutput
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
-  type: Property
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: RedirectStandardOutput
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 17
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  syntax:
-    content: public bool RedirectStandardOutput { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property RedirectStandardOutput As Boolean
-  overload: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.Boolean)
-  id: '#ctor(System.String,System.Boolean)'
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: CommandPrompt(String, Boolean)
-  nameWithType: CommandPrompt.CommandPrompt(String, Boolean)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.Boolean)
+  name: CommandPrompt()
+  nameWithType: CommandPrompt.CommandPrompt()
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt()
   type: Constructor
   source:
     remote:
@@ -259,33 +190,28 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: .ctor
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 18
+    startLine: 45
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   syntax:
-    content: public CommandPrompt(string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
-    parameters:
-    - id: cmdLocation
-      type: System.String
-    - id: hideWindow
-      type: System.Boolean
-    content.vb: Public Sub New(cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+    content: public CommandPrompt()
+    content.vb: Public Sub New
   overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.String,System.String,System.String,System.Boolean)
-  id: '#ctor(System.String,System.String,System.String,System.Boolean)'
+- uid: DotNetHelper_CommandLine.CommandPrompt.#ctor(System.Boolean)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
   parent: DotNetHelper_CommandLine.CommandPrompt
   langs:
   - csharp
   - vb
-  name: CommandPrompt(String, String, String, Boolean)
-  nameWithType: CommandPrompt.CommandPrompt(String, String, String, Boolean)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.String, System.String, System.String, System.Boolean)
+  name: CommandPrompt(Boolean)
+  nameWithType: CommandPrompt.CommandPrompt(Boolean)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.CommandPrompt(System.Boolean)
   type: Constructor
   source:
     remote:
@@ -294,22 +220,16 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: .ctor
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 24
+    startLine: 50
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   syntax:
-    content: public CommandPrompt(string runAsUser, string password, string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
+    content: public CommandPrompt(bool hideWindow)
     parameters:
-    - id: runAsUser
-      type: System.String
-    - id: password
-      type: System.String
-    - id: cmdLocation
-      type: System.String
     - id: hideWindow
       type: System.Boolean
-    content.vb: Public Sub New(runAsUser As String, password As String, cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+    content.vb: Public Sub New(hideWindow As Boolean)
   overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
   modifiers.csharp:
   - public
@@ -333,20 +253,20 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: .ctor
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 32
+    startLine: 55
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
   syntax:
-    content: public CommandPrompt(string runAsUser, string cmdLocation = "C:\\windows\\system32\\cmd.exe", bool hideWindow = true)
+    content: public CommandPrompt(string runAsUser, string password, bool hideWindow)
     parameters:
     - id: runAsUser
       type: System.String
-    - id: cmdLocation
+    - id: password
       type: System.String
     - id: hideWindow
       type: System.Boolean
-    content.vb: Public Sub New(runAsUser As String, cmdLocation As String = "C:\windows\system32\cmd.exe", hideWindow As Boolean = True)
+    content.vb: Public Sub New(runAsUser As String, password As String, hideWindow As Boolean)
   overload: DotNetHelper_CommandLine.CommandPrompt.#ctor*
   modifiers.csharp:
   - public
@@ -370,7 +290,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: UpdateDefaultUserAndPassword
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 39
+    startLine: 68
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -405,59 +325,60 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: CreateSecurePassword
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 44
+    startLine: 79
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
+  summary: "\n\n"
+  example: []
   syntax:
     content: public SecureString CreateSecurePassword(string password)
     parameters:
     - id: password
       type: System.String
+      description: ''
     return:
       type: System.Security.SecureString
+      description: ''
     content.vb: Public Function CreateSecurePassword(password As String) As SecureString
   overload: DotNetHelper_CommandLine.CommandPrompt.CreateSecurePassword*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
-  id: CreateStartInfo(System.String,System.String,System.Boolean,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  id: RunCommand(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
   parent: DotNetHelper_CommandLine.CommandPrompt
   langs:
   - csharp
   - vb
-  name: CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
-  nameWithType: CommandPrompt.CreateStartInfo(String, String, Boolean, DataReceivedEventHandler, DataReceivedEventHandler)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo(System.String, System.String, System.Boolean, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  name: RunCommand(String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.EventHandler, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
   type: Method
   source:
     remote:
       path: src/DotNetHelper-CommandLine/CommandPrompt.cs
       branch: master
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: CreateStartInfo
+    id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 67
+    startLine: 124
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
   example: []
   syntax:
-    content: public ProcessStartInfo CreateStartInfo(string command, string workingDirectory, bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
+    content: public int? RunCommand(string command, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
     parameters:
     - id: command
       type: System.String
-      description: command to run
-    - id: workingDirectory
-      type: System.String
-      description: 'directory to run command from '
-    - id: hideWindow
-      type: System.Boolean
-      description: 'if true will show cmd will show during execution of the command '
+      description: the command to run
+    - id: exited
+      type: System.EventHandler
+      description: Occurs when the process exits
     - id: outputDataReceived
       type: System.Diagnostics.DataReceivedEventHandler
       description: event handler for responses return during the execution of the command
@@ -465,72 +386,24 @@ items:
       type: System.Diagnostics.DataReceivedEventHandler
       description: event handler for error responses return during the execution of the command
     return:
-      type: System.Diagnostics.ProcessStartInfo
-      description: ''
-    content.vb: Public Function CreateStartInfo(command As String, workingDirectory As String, hideWindow As Boolean = True, outputDataReceived As DataReceivedEventHandler = Nothing, errorDataReceived As DataReceivedEventHandler = Nothing) As ProcessStartInfo
-  overload: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  id: RunCommand(System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler)
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-  nameWithType: CommandPrompt.RunCommand(String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: RunCommand
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 91
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
-  example: []
-  syntax:
-    content: public int? RunCommand(string command, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited)
-    parameters:
-    - id: command
-      type: System.String
-      description: ''
-    - id: outputDataReceived
-      type: System.Diagnostics.DataReceivedEventHandler
-      description: event handler for responses return during the execution of the command
-    - id: errorDataReceived
-      type: System.Diagnostics.DataReceivedEventHandler
-      description: event handler for error responses return during the execution of the command
-    - id: exited
-      type: System.EventHandler
-      description: ''
-    return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler) As Integer?
+    content.vb: Public Function RunCommand(command As String, exited As EventHandler, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Int32)
-  id: RunCommand(System.String,System.String,System.Int32)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler)
+  id: RunCommand(System.String,System.String,System.EventHandler)
   parent: DotNetHelper_CommandLine.CommandPrompt
   langs:
   - csharp
   - vb
-  name: RunCommand(String, String, Int32)
-  nameWithType: CommandPrompt.RunCommand(String, String, Int32)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.Int32)
+  name: RunCommand(String, String, EventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, String, EventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.EventHandler)
   type: Method
   source:
     remote:
@@ -539,75 +412,28 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 103
+    startLine: 136
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
   example: []
   syntax:
-    content: public int? RunCommand(string command, string workingDirectory, int timeoutInMilliseconds)
+    content: public int? RunCommand(string command, string workingDirectory, EventHandler exited)
     parameters:
     - id: command
       type: System.String
       description: the command to run
     - id: workingDirectory
       type: System.String
-      description: ''
-    - id: timeoutInMilliseconds
-      type: System.Int32
-      description: ''
-    return:
-      type: System.Nullable{System.Int32}
-      description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String, timeoutInMilliseconds As Integer) As Integer?
-  overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Int32)
-  id: RunCommand(System.String,System.String,System.EventHandler,System.Int32)
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: RunCommand(String, String, EventHandler, Int32)
-  nameWithType: CommandPrompt.RunCommand(String, String, EventHandler, Int32)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.EventHandler, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: RunCommand
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 116
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
-  example: []
-  syntax:
-    content: public int? RunCommand(string command, string workingDirectory, EventHandler exited, int timeoutInMilliseconds = 2147483647)
-    parameters:
-    - id: command
-      type: System.String
-      description: the command to run
-    - id: workingDirectory
-      type: System.String
-      description: ''
+      description: sets the working directory for the command to be run
     - id: exited
       type: System.EventHandler
-    - id: timeoutInMilliseconds
-      type: System.Int32
-      description: ''
+      description: Occurs when the process exits
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String, exited As EventHandler, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String, exited As EventHandler) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
@@ -631,89 +457,40 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 121
+    startLine: 147
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
-  syntax:
-    content: public int? RunCommand(string command, string workingDirectory)
-    parameters:
-    - id: command
-      type: System.String
-    - id: workingDirectory
-      type: System.String
-    return:
-      type: System.Nullable{System.Int32}
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String) As Integer?
-  overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  id: RunCommand(System.String,System.String,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  parent: DotNetHelper_CommandLine.CommandPrompt
-  langs:
-  - csharp
-  - vb
-  name: RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
-  nameWithType: CommandPrompt.RunCommand(String, String, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
-    id: RunCommand
-    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 136
-  assemblies:
-  - DotNetHelper-CommandLine
-  namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
   example: []
   syntax:
-    content: public int? RunCommand(string command, string workingDirectory, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)
+    content: public int? RunCommand(string command, string workingDirectory)
     parameters:
     - id: command
       type: System.String
       description: the command to run
     - id: workingDirectory
       type: System.String
-      description: ''
-    - id: outputDataReceived
-      type: System.Diagnostics.DataReceivedEventHandler
-      description: event handler for responses return during the execution of the command
-    - id: errorDataReceived
-      type: System.Diagnostics.DataReceivedEventHandler
-      description: event handler for error responses return during the execution of the command
-    - id: exited
-      type: System.EventHandler
-      description: ''
-    - id: timeoutInMilliseconds
-      type: System.Int32
-      description: ''
+      description: sets the working directory for the command to be run
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(command As String, workingDirectory As String, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
-  id: RunCommand(System.Diagnostics.ProcessStartInfo,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler,System.EventHandler,System.Int32)
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String)
+  id: RunCommand(System.String)
   parent: DotNetHelper_CommandLine.CommandPrompt
   langs:
   - csharp
   - vb
-  name: RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
-  nameWithType: CommandPrompt.RunCommand(ProcessStartInfo, DataReceivedEventHandler, DataReceivedEventHandler, EventHandler, Int32)
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.Diagnostics.ProcessStartInfo, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler, System.EventHandler, System.Int32)
+  name: RunCommand(String)
+  nameWithType: CommandPrompt.RunCommand(String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String)
   type: Method
   source:
     remote:
@@ -722,35 +499,299 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: RunCommand
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 188
+    startLine: 157
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
-  summary: "\n\n"
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
   example: []
   syntax:
-    content: public int? RunCommand(ProcessStartInfo info, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived, EventHandler exited, int timeoutInMilliseconds = 2147483647)
+    content: public int? RunCommand(string command)
     parameters:
-    - id: info
-      type: System.Diagnostics.ProcessStartInfo
-      description: ''
+    - id: command
+      type: System.String
+      description: the command to run
+    return:
+      type: System.Nullable{System.Int32}
+      description: 'the process Exit Code '
+    content.vb: Public Function RunCommand(command As String) As Integer?
+  overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  id: RunCommand(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: RunCommand(String, String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  nameWithType: CommandPrompt.RunCommand(String, String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.RunCommand(System.String, System.String, System.EventHandler, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: RunCommand
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 171
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public int? RunCommand(string command, string workingDirectory, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: workingDirectory
+      type: System.String
+      description: sets the working directory for the command to be run
+    - id: exited
+      type: System.EventHandler
+      description: Occurs when the process exits
     - id: outputDataReceived
       type: System.Diagnostics.DataReceivedEventHandler
       description: event handler for responses return during the execution of the command
     - id: errorDataReceived
       type: System.Diagnostics.DataReceivedEventHandler
       description: event handler for error responses return during the execution of the command
-    - id: exited
-      type: System.EventHandler
-      description: ''
-    - id: timeoutInMilliseconds
-      type: System.Int32
-      description: ''
     return:
       type: System.Nullable{System.Int32}
       description: 'the process Exit Code '
-    content.vb: Public Function RunCommand(info As ProcessStartInfo, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler, exited As EventHandler, timeoutInMilliseconds As Integer = 2147483647) As Integer?
+    content.vb: Public Function RunCommand(command As String, workingDirectory As String, exited As EventHandler, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler) As Integer?
   overload: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  id: GetProcess(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: GetProcess(String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  nameWithType: CommandPrompt.GetProcess(String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String, System.EventHandler, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: GetProcess
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 220
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public Process GetProcess(string command, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: exited
+      type: System.EventHandler
+      description: Occurs when the process exits
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    return:
+      type: System.Diagnostics.Process
+      description: 'the process '
+    content.vb: Public Function GetProcess(command As String, exited As EventHandler, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler) As Process
+  overload: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler)
+  id: GetProcess(System.String,System.String,System.EventHandler)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: GetProcess(String, String, EventHandler)
+  nameWithType: CommandPrompt.GetProcess(String, String, EventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String, System.String, System.EventHandler)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: GetProcess
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 232
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public Process GetProcess(string command, string workingDirectory, EventHandler exited)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: workingDirectory
+      type: System.String
+      description: sets the working directory for the command to be run
+    - id: exited
+      type: System.EventHandler
+      description: Occurs when the process exits
+    return:
+      type: System.Diagnostics.Process
+      description: 'the process  '
+    content.vb: Public Function GetProcess(command As String, workingDirectory As String, exited As EventHandler) As Process
+  overload: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String)
+  id: GetProcess(System.String,System.String)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: GetProcess(String, String)
+  nameWithType: CommandPrompt.GetProcess(String, String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: GetProcess
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 243
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public Process GetProcess(string command, string workingDirectory)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: workingDirectory
+      type: System.String
+      description: sets the working directory for the command to be run
+    return:
+      type: System.Diagnostics.Process
+      description: 'the process '
+    content.vb: Public Function GetProcess(command As String, workingDirectory As String) As Process
+  overload: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String)
+  id: GetProcess(System.String)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: GetProcess(String)
+  nameWithType: CommandPrompt.GetProcess(String)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: GetProcess
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 253
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public Process GetProcess(string command)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    return:
+      type: System.Diagnostics.Process
+      description: 'the process '
+    content.vb: Public Function GetProcess(command As String) As Process
+  overload: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  commentId: M:DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  id: GetProcess(System.String,System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler,System.Diagnostics.DataReceivedEventHandler)
+  parent: DotNetHelper_CommandLine.CommandPrompt
+  langs:
+  - csharp
+  - vb
+  name: GetProcess(String, String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  nameWithType: CommandPrompt.GetProcess(String, String, EventHandler, DataReceivedEventHandler, DataReceivedEventHandler)
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess(System.String, System.String, System.EventHandler, System.Diagnostics.DataReceivedEventHandler, System.Diagnostics.DataReceivedEventHandler)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-CommandLine/CommandPrompt.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
+    id: GetProcess
+    path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
+    startLine: 267
+  assemblies:
+  - DotNetHelper-CommandLine
+  namespace: DotNetHelper_CommandLine
+  summary: "\nStarts a new instance of a command terminal and runs the specified command\n"
+  example: []
+  syntax:
+    content: public Process GetProcess(string command, string workingDirectory, EventHandler exited, DataReceivedEventHandler outputDataReceived, DataReceivedEventHandler errorDataReceived)
+    parameters:
+    - id: command
+      type: System.String
+      description: the command to run
+    - id: workingDirectory
+      type: System.String
+      description: sets the working directory for the command to be run
+    - id: exited
+      type: System.EventHandler
+      description: Occurs when the process exits
+    - id: outputDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for responses return during the execution of the command
+    - id: errorDataReceived
+      type: System.Diagnostics.DataReceivedEventHandler
+      description: event handler for error responses return during the execution of the command
+    return:
+      type: System.Diagnostics.Process
+      description: 'the process '
+    content.vb: Public Function GetProcess(command As String, workingDirectory As String, exited As EventHandler, outputDataReceived As DataReceivedEventHandler, errorDataReceived As DataReceivedEventHandler) As Process
+  overload: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -773,7 +814,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper-CommandLine
     id: Dispose
     path: ../src/DotNetHelper-CommandLine/CommandPrompt.cs
-    startLine: 229
+    startLine: 300
   assemblies:
   - DotNetHelper-CommandLine
   namespace: DotNetHelper_CommandLine
@@ -1104,6 +1145,18 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: DotNetHelper_CommandLine.CommandPrompt.TimeOut*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.TimeOut
+  name: TimeOut
+  nameWithType: CommandPrompt.TimeOut
+  fullName: DotNetHelper_CommandLine.CommandPrompt.TimeOut
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateNoWindow
   name: CreateNoWindow
@@ -1116,21 +1169,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute*
-  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
-  name: UseShellExecute
-  nameWithType: CommandPrompt.UseShellExecute
-  fullName: DotNetHelper_CommandLine.CommandPrompt.UseShellExecute
-- uid: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError*
-  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-  name: RedirectStandardError
-  nameWithType: CommandPrompt.RedirectStandardError
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardError
-- uid: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput*
-  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
-  name: RedirectStandardOutput
-  nameWithType: CommandPrompt.RedirectStandardOutput
-  fullName: DotNetHelper_CommandLine.CommandPrompt.RedirectStandardOutput
 - uid: DotNetHelper_CommandLine.CommandPrompt.#ctor*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.#ctor
   name: CommandPrompt
@@ -1159,31 +1197,6 @@ references:
   name: System.Security
   nameWithType: System.Security
   fullName: System.Security
-- uid: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo*
-  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo
-  name: CreateStartInfo
-  nameWithType: CommandPrompt.CreateStartInfo
-  fullName: DotNetHelper_CommandLine.CommandPrompt.CreateStartInfo
-- uid: System.Diagnostics.DataReceivedEventHandler
-  commentId: T:System.Diagnostics.DataReceivedEventHandler
-  parent: System.Diagnostics
-  isExternal: true
-  name: DataReceivedEventHandler
-  nameWithType: DataReceivedEventHandler
-  fullName: System.Diagnostics.DataReceivedEventHandler
-- uid: System.Diagnostics.ProcessStartInfo
-  commentId: T:System.Diagnostics.ProcessStartInfo
-  parent: System.Diagnostics
-  isExternal: true
-  name: ProcessStartInfo
-  nameWithType: ProcessStartInfo
-  fullName: System.Diagnostics.ProcessStartInfo
-- uid: System.Diagnostics
-  commentId: N:System.Diagnostics
-  isExternal: true
-  name: System.Diagnostics
-  nameWithType: System.Diagnostics
-  fullName: System.Diagnostics
 - uid: DotNetHelper_CommandLine.CommandPrompt.RunCommand*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.RunCommand
   name: RunCommand
@@ -1196,6 +1209,13 @@ references:
   name: EventHandler
   nameWithType: EventHandler
   fullName: System.EventHandler
+- uid: System.Diagnostics.DataReceivedEventHandler
+  commentId: T:System.Diagnostics.DataReceivedEventHandler
+  parent: System.Diagnostics
+  isExternal: true
+  name: DataReceivedEventHandler
+  nameWithType: DataReceivedEventHandler
+  fullName: System.Diagnostics.DataReceivedEventHandler
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -1240,6 +1260,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
 - uid: System.Nullable`1
   commentId: T:System.Nullable`1
   isExternal: true
@@ -1279,13 +1305,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+- uid: DotNetHelper_CommandLine.CommandPrompt.GetProcess*
+  commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.GetProcess
+  name: GetProcess
+  nameWithType: CommandPrompt.GetProcess
+  fullName: DotNetHelper_CommandLine.CommandPrompt.GetProcess
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+  name: Process
+  nameWithType: Process
+  fullName: System.Diagnostics.Process
 - uid: DotNetHelper_CommandLine.CommandPrompt.Dispose*
   commentId: Overload:DotNetHelper_CommandLine.CommandPrompt.Dispose
   name: Dispose

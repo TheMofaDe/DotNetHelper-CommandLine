@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Code/Github/TheMofaDe/DotNetHelper-CommandLine/docs",
+  "source_base_path": "C:/Business/TheMoFaDe/Code/TheMofaDe/DotNetHelper-CommandLine/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.CommandPrompt.html",
-          "hash": "m5Y8w6xvqALD/V5ed66CNg=="
+          "hash": "yO/BpnKF8foQnVSNA4kRlw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.UnixCommands.html",
-          "hash": "Pk04QdbfsBm9IZ+ri30StA=="
+          "hash": "N4hqNjmLDTtEMNILaYtqQA=="
         }
       },
       "is_incremental": false,
@@ -42,19 +42,19 @@
       "output": {
         ".html": {
           "relative_path": "api/DotNetHelper_CommandLine.html",
-          "hash": "ux5llgpwZQHbsmP3fvHFXw=="
+          "hash": "C+8Ny22M5GK1nRHNtdT8mg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/sample.md",
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/sample.html",
-          "hash": "p40woxIO+aW7kvc07EMo7Q=="
+          "relative_path": "api/toc.html",
+          "hash": "LThxRLob9wWPLw3xvehLTQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         "resource": {
           "relative_path": "images/codesnippet1.PNG",
-          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/codesnippet1.PNG"
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/codesnippet1.PNG"
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         "resource": {
           "relative_path": "images/icon.png",
-          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/icon.png"
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/images/icon.png"
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "8bQw1qMxBa+jUJDb0XAe3Q=="
+          "hash": "CYKdE7k5y3V0N0rDrwMrxg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,82 @@
       "output": {
         "resource": {
           "relative_path": "langwordmapping/langwordMapping.yml",
-          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-CommandLine\\docs/langwordmapping/langwordMapping.yml"
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper-CommandLine\\docs/langwordmapping/langwordMapping.yml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ZrfHbmhO0I1UV4kkosLI0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Attributes/attribute.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Attributes/attribute.html",
+          "hash": "DWG+daGK8jzVPaLMvQOhrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/GenerateSql/datatable2sql.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/GenerateSql/datatable2sql.html",
+          "hash": "KmE222hrl0liNkrj8G53eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/GenerateSql/object2sql.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/GenerateSql/object2sql.html",
+          "hash": "7/qHF3paClNV4FlIwa0moQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/index.html",
+          "hash": "2i/jkxWNc8tacf4YNuCtrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html",
+          "hash": "Ku3uC8uNMfP+72+HoBp5lg=="
         }
       },
       "is_incremental": false,
@@ -112,12 +187,10 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -127,24 +200,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 5
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
         }
       }
     },
