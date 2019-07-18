@@ -25,5 +25,5 @@ cmd.GetProcess("echo myname");
  public ProcessStartInfo CreateStartInfo(string command, bool hideWindow = true, DataReceivedEventHandler outputDataReceived = null, DataReceivedEventHandler errorDataReceived = null)
 ~~~
 
-[0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1
+[1.1.0]: https://github.com/TheMofaDe/DotNetHelper-CommandLine/releases/tag/v1.1.0
 
