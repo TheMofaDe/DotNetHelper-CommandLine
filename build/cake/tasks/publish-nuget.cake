@@ -1,5 +1,4 @@
 Task("Publish-NuGet")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledPublishNuget, "Publish-NuGet was disabled.")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Publish-NuGet works only on Windows agents.")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnMainBuildSystem,     "Publish-Nuget works only on the main BuildSystem")
     .Does<BuildParameters>((parameters) =>
