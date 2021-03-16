@@ -1,16 +1,16 @@
 # NAME : name of item this field allows white space 
 # HREF : on item click redirect lnk
 - name: Home
-  href: index.md
-- name: Attributes 
-  href: Attributes/attribute.md
+  href: ../index.md
+- name: Test1 
+  href: Test1/Test1.md
   # topicUid: Tutorial.Attibutes
-  topicHref: Attributes/attribute.md
-- name: Generating SQL 
+  topicHref: Test1/Test1.md
+- name: Test Page 2 
   items:
-    - name: "Object To Sql"
+    - name: "Child 1"
       href: ../
-      topicHref: GenerateSQL/object2sql.md
-    - name: "DataTable To Sql"
+      topicHref: Test2/child1.md
+    - name: "Child 2"
       href: ../
-      topicHref: GenerateSQL/datatable2sql.md           
+      topicHref: Test2/child2.md           

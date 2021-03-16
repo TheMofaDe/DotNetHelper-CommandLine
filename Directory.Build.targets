@@ -1,0 +1,9 @@
+<Project>
+
+
+<Import  Condition="'$(MSBuildProjectExtension)' == '.csproj'"  Project="$(RepoRootPath)\build\msbuild\Version.targets"/>
+<Import  Condition="'$(MSBuildProjectExtension)' == '.csproj' AND '$(GenerateDocumentation)' == 'true'"  Project="$(RepoRootPath)\build\msbuild\DocsFx.targets"/>
+<Import  Condition="'$(MSBuildProjectExtension)' == '.csproj' AND '$(CreateMSI)' == 'true'"  Project="$(RepoRootPath)\build\msbuild\Wix.targets"/>
+
+
+</Project>

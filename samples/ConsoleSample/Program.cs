@@ -4,29 +4,36 @@ using DotNetHelper_CommandLine;
 
 namespace ConsoleSample
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-                var cmd = new CommandPrompt();
-                cmd.RunCommand(UnixCommands.Ping("www.google.com"), null, Exited, OnDataReceived, ErrorDataReceived);
-                cmd.RunCommand(UnixCommands.Ping("This is not a valid command"), null, Exited, OnDataReceived, ErrorDataReceived);
-                Console.ReadLine();
-        }
-        private static void Exited(object sender, EventArgs e)
-        {
-            Console.WriteLine("command has exited.");
-        }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var cmd = new CommandPrompt() { };
+			cmd.OutputDataReceived += OnDataReceived;
+			cmd.Exited += Exited;
+			cmd.ErrorDataReceived += ErrorDataReceived;
 
-        private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            Console.WriteLine("error : " + e.Data);
-        }
+			var process = cmd.RunCommand("ping www.google.com");
+			// Or if you need wait until the process 
+			var processButExited = cmd.RunCommandAndWaitForExit("ping www.youtube.com");
+			Console.ReadKey();
+		}
 
-        private static void OnDataReceived(object sender, DataReceivedEventArgs args)
-        {
-            Console.WriteLine("received data : " + args.Data);
-        }
 
-    }
+		private static void Exited(object sender, EventArgs e)
+		{
+			Console.WriteLine("command has exited.");
+		}
+
+		private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
+		{
+			Console.WriteLine("error : " + e.Data);
+		}
+
+		private static void OnDataReceived(object sender, DataReceivedEventArgs args)
+		{
+			Console.WriteLine("received data : " + args.Data);
+		}
+
+	}
 }

@@ -1,174 +1,189 @@
 using System;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 using DotNetHelper_CommandLine;
-using NUnit.Framework;
+using Xunit;
+
 
 namespace Tests
 {
-    [TestFixture]
+	public class CommandPromptTests
+	{
+		public MemoryStream MemoryStream = new();
+		public StreamWriter StreamWriter { get; }
+		public CommandPromptTests()
+		{
+			//StreamWriter = new StreamWriter(MemoryStream) {AutoFlush = true};
+			//Console.SetOut(StreamWriter);
+		}
 
-    public class CommandLineTestFixture 
-    {
+#if NET5_0_OR_GREATER
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public async Task RunCommandAndWaitForExitAsync_WithInvalidCommand_ShouldReturnBadExitCode(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var actualErrorValue = string.Empty;
+			int? exitCode = null;
+			var command = $"ec";
 
-        public CommandPrompt CommandPrompt { get; } = new CommandPrompt();
-        public CommandLineTestFixture() 
-        {
-
-
-        }
-
-        [OneTimeSetUp]
-        public void RunBeforeAnyTests()
-        {
-
-        }
-
-        [OneTimeTearDown]
-        public void RunAfterAnyTests()
-        {
-        
-        }
-
-
-
-        [SetUp]
-        public void Init()
-        {
-
-        }
-
-        [TearDown]
-        public void Cleanup()
-        {
- 
-        }
-
-        [Test]
-        public void Test_RunCommand_ReturnsMessage()
-        {
-            var cmd = new CommandPrompt(false);
-            var command = $"echo BRO";
-            var hasReceivedMessage = false;
-            cmd.RunCommand(command
-                , delegate (object sender, EventArgs args)
-                {
-                    Console.WriteLine("Exit");
-                    Assert.IsTrue(hasReceivedMessage, "Didn't Receive message from running command.");
-                }
-                , delegate (object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                    if (args.Data?.Equals("BRO") == true)
-                        hasReceivedMessage = true;
-                }
-                , delegate(object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                }
-            );
-          
- 
-        }
+			cmd.ErrorDataReceived += delegate (object sender, DataReceivedEventArgs args)
+			{
+				if (args.Data is not null)
+					actualErrorValue = args.Data;
+			};
+			// Act
+			var exception = await Record.ExceptionAsync(async () =>
+			{
+				var process = await cmd.RunCommandAndWaitForExitAsync(command);
+				exitCode = process.ExitCode;
+			});
 
 
-        [Test]
-        public void Test_RunCommand_Overload_CommandOnly()
-        {
-            var cmd = new CommandPrompt(false);
-            var command = $"echo BRO";
-            var hasReceivedMessage = false;
-            var processCode = cmd.RunCommand("echo Today");
-            Assert.AreEqual(0,processCode);
-        }
+			//Assert
+			Assert.Null(exception);
+			Assert.Equal(1, exitCode);
+			Assert.NotEmpty(actualErrorValue.ToCharArray());
+		}
 
 
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public async Task RunCommandAndWaitForExitAsync_WithEchoAsCommand_ShouldEcho(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var actualValue = string.Empty;
+			var expectedValue = "myname";
+			int? exitCode = null;
+			var command = $"echo {expectedValue}";
 
-        [Test]
-        public void Test_RunCommand_Ensure_Failure_ExitCode()
-        {
-            var cmd = new CommandPrompt(false);
-            var command = $"echo BRO";
-            var hasReceivedMessage = false;
-            var processCode = cmd.RunCommand("IAMNOTVALIDSYNTAX");
-            Assert.AreEqual(1, processCode);
-        }
+			cmd.OutputDataReceived += delegate(object sender, DataReceivedEventArgs args)
+			{
+				if(args.Data is not null)
+					actualValue = args.Data;
+			};
 
+			// Act
+			var exception = await Record.ExceptionAsync(async () =>
+			{
+				var process = await cmd.RunCommandAndWaitForExitAsync(command);
+				exitCode = process.ExitCode;
+			});
+			
+			
+			//Assert
+			Assert.Null(exception);
+			Assert.Equal(0,exitCode);
+			Assert.Equal(expectedValue, actualValue);
+		}
+#endif
 
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public void RunCommand_WithEchoAsCommand_ShouldEcho(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var actualValue = string.Empty;
+			int? exitCode = null;
+			var expectedValue = "myname";
+			var command = $"echo {expectedValue}";
 
+			cmd.OutputDataReceived += delegate (object sender, DataReceivedEventArgs args)
+			{
+				if (args.Data is not null)
+					actualValue = args.Data;
+			};
 
-        [Test]
-        public void Test_GetProcess_ReturnsMessage()
-        {
-            var cmd = new CommandPrompt(false);
-            var command = $"echo BRO";
-            var hasReceivedMessage = false;
-            var process = cmd.GetProcess(command
-                , delegate (object sender, EventArgs args)
-                {
-                    Console.WriteLine("Exit");
-                    Assert.IsTrue(hasReceivedMessage, "Didn't Receive message from running command.");
-                }
-                , delegate (object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                    if (args.Data?.Equals("BRO") == true)
-                        hasReceivedMessage = true;
-                }
-                , delegate (object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                }
-            );
-            Assert.IsNotNull(process);
-
-        }
-
-
-        [Test]
-        public void Test_GetProcess_Overload_CommandOnly()
-        {
-            var cmd = new CommandPrompt(false);
-            var command = $"echo BRO";
-            var process = cmd.GetProcess("echo Today");
-            Assert.AreEqual(0, process.ExitCode);
-        }
-
-
-
-
-
-
-
-        [Test]
-        [Ignore("// MUST HAVE LOCAL ACCOUNT WITH THIS USERNAME AND PASSWORD")]
-        public void Test_RunCommand_WithUsernameAndPassword()
-        {
-            var cmd = new CommandPrompt("Administrator1","Password@123",false); 
-            var command = $"echo BRO";
-            var hasReceivedMessage = false;
-            cmd.RunCommand(command
-                , delegate (object sender, EventArgs args)
-                {
-                    Console.WriteLine("Exit");
-                    Assert.IsTrue(hasReceivedMessage, "Didn't Receive message from running command.");
-                }
-                , delegate (object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                    if (args.Data?.Equals("BRO") == true)
-                        hasReceivedMessage = true;
-                }
-                , delegate (object sender, DataReceivedEventArgs args)
-                {
-                    Console.WriteLine(args.Data);
-                }
-            );
-
-        }
-
-       
+			// Act
+			var exception = Record.Exception(() =>
+			{
+				var process = cmd.RunCommand(command);
+				process.WaitForExit();
+				exitCode = process.ExitCode;
+			});
 
 
+			//Assert
+			Assert.Null(exception);
+			Assert.Equal(0, exitCode);
+			Assert.Equal(expectedValue, actualValue);
+		}
 
-    }
+
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public void RunCommandAndWaitForExit_WithEchoAsCommand_ShouldEcho(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var actualValue = string.Empty;
+			int? exitCode = null;
+			var expectedValue = "myname";
+			var command = $"echo {expectedValue}";
+
+			cmd.OutputDataReceived += delegate (object sender, DataReceivedEventArgs args)
+			{
+				if (args.Data is not null)
+					actualValue = args.Data;
+			};
+
+			// Act
+			var exception = Record.Exception(() =>
+			{
+				(Process process, var didProcessExit) = cmd.RunCommandAndWaitForExit(command);
+				exitCode = process.ExitCode;
+			});
+
+
+			//Assert
+			Assert.Null(exception);
+			Assert.Equal(0, exitCode);
+			Assert.Equal(expectedValue, actualValue);
+		}
+
+
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public void RunCommandAndWaitForExit_ShouldExitEarly_WhenTimeoutIsSet(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var actualValue = string.Empty;
+			int? exitCode = null;
+			var expectedValue = "myname";
+			var command = $"echo {expectedValue}";
+
+			cmd.OutputDataReceived += delegate (object sender, DataReceivedEventArgs args)
+			{
+				if (args.Data is not null)
+					actualValue = args.Data;
+			};
+
+			// Act
+			var exception = Record.Exception(() =>
+			{
+				(Process process, var didProcessExit) = cmd.RunCommandAndWaitForExit(command, timeout: TimeSpan.FromMilliseconds(1));
+				exitCode = process.ExitCode;
+			});
+
+
+			//Assert
+			Assert.NotNull(exception);
+			Assert.Equal(null, exitCode);
+			Assert.Equal(string.Empty, actualValue);
+		}
+
+	}
+
+
 }

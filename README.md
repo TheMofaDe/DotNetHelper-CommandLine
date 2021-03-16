@@ -15,26 +15,34 @@
 
 
 ```csharp
-        static void Main(string[] args)
-        {
-                var cmd = new CommandPrompt();
-                var exitCode = cmd.RunCommand("ping www.google.com"), null,Exited, OnDataReceived, ErrorDataReceived); // RETURNS 0
-                var exitCode1 = cmd.RunCommand("ping This is not a valid command"), null, OnDataReceived, ErrorDataReceived, Exited); // RETURN 1
-                Console.ReadLine();
-        }
-        private static void Exited(object sender, EventArgs e)
-        {
-            Console.WriteLine("command has finished.");
-        }
-        private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            Console.WriteLine("error : " + e.Data);
-        }
-        private static void OnDataReceived(object sender, DataReceivedEventArgs args)
-        {
-            Console.WriteLine("received data : " + args.Data);
-        }
-    }
+static void Main(string[] args)
+{
+	var cmd = new CommandPrompt();
+	cmd.OutputDataReceived += OnDataReceived;
+	cmd.Exited += Exited;
+	cmd.ErrorDataReceived += ErrorDataReceived;
+
+    var process = cmd.RunCommand("ping www.google.com");
+    // Or if you need wait until the process 
+    var processButExited = cmd.RunCommandAndWaitForExit("ping www.youtube.com");
+}
+
+
+private static void Exited(object sender, EventArgs e)
+{
+	Console.WriteLine("command has exited.");
+}
+
+private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
+{
+	Console.WriteLine("error : " + e.Data);
+}
+
+private static void OnDataReceived(object sender, DataReceivedEventArgs args)
+{
+	Console.WriteLine("received data : " + args.Data);
+}
+
 ```
 ## Results from sample code
  
@@ -46,9 +54,6 @@
 ## Documentation
 For more information, please refer to the [Officials Docs][Docs]
 
-<!-- Links. -->
-## Solution Template
-[![badge](https://img.shields.io/badge/Built%20With-DotNet--Starter--Template-orange.svg)](https://github.com/TheMofaDe/DotNet-Starter-Template)
 
 
 <!-- Links. -->

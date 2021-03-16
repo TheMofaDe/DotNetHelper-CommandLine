@@ -1,73 +1,100 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [ "**.csproj" ],
-          "exclude": [ "**/bin/**", "**/obj/**" ],
-          "src": "../src"
+  "metadata":[
+     {
+        "src":[
+           {
+            "files": [
+                "**/DotNetHelper-CommandLine.csproj"
+            ],
+              "exclude":[
+                 "**/bin/**",
+                 "**/obj/**"
+              ],
+              "src":"../src"
+           }
+        ],
+        "dest":"api",
+        "shouldSkipMarkup": false,
+        "properties":{
+           "TargetFramework":"net5.0"
         }
-      ],
-      "dest": "api",
-      "properties": {
-        "TargetFramework": "net452"
-      }
-    }
+     }
   ],
-  "build": {
+  "build":{
+     "content":[
+        {
+           "files":[
+              "*.yml",
+              "*.md"
+           ],
+           "src":"api",
+           "dest":"api"
+        },
+        {
+           "files":[
+              "*.md",
+              "toc.yml"
+           ],
+           "src":".",
+           "dest":"."
+        },
+        {
+           "files":[
+              "*.md",
+              "*.yml",
+              "**/*.md",
+              "**/*.yml"
+           ],
+           "src":"./tutorials",
+           "dest":"./tutorials"
+        }
+     ],
+     "resource":[
+        {
+           "files":[
+              "images/**",
+              "langwordmapping/**"
+           ],
+           "exclude":[
+              "**.meta"
+           ]
+        }
+     ],
+     "globalMetadata":{
+        "_appTitle":"DotNetHelper-CommandLine",
+        "_gitContribute": {
+            "repo": "https://github.com/TheMofaDe/DotNetHelper-CommandLine",
+            "branch": "master",
+            "apiSpecFolder": "docs-ref-overwrite"
+        },
+        "_disableContribution":false,
+        "_disableBreadcrumb":false,
+        "_appFaviconPath":"logo/favicon.ico",
+        "_disableNavbar":false,
+        "_enableSearch":true,
+        "_navRel":"toc.html",
+        "_appLogoPath":"logo/logo.png",
+        "_appFooter":" <strong>2021 Joseph McNeal Jr</strong>"
+     },
+     "dest":"./",
+     "globalMetadataFiles":[
 
-    "content": [
-      {
-        "files": [ "*.yml", "*.md" ],
-        "src": "api",
-        "dest": "api"
-      },
-      {
-        "files": [ "*.md", "toc.yml" ],
-        "src": ".",
-        "dest": "."
-      },
+     ],
+     "template":[
+        "default",
+        "statictoc",
+        "templates/darkfx"
+     ],
+     "postProcessors":[
 
-      {
-        "files": [ "*.md", "*.yml", "**/*.md", "**/*.yml" ],
-        "src": "./tutorials",
-        "dest": "./tutorials"
-      }
-    ],
-    "resource": [
-      {
-        "files": [ "images/**", "langwordmapping/**" ],
-        "exclude": [ "**.meta" ]
-      }
-    ],
-    "globalMetadata": {
-      "_appTitle": "DotNetHelper-CommandLine",
-      //"_gitContribute": {
-      //  "repo": "https://github.com/TheMofaDe/DotNetHelper-CommandLine",
-      //  "branch": "master",
-      //  "apiSpecFolder": "docs-ref-overwrite"
-      //},
-      "_disableContribution": false,
-      "_disableBreadcrumb": false,
-      "_appFaviconPath": "logo/favicon.ico",
-      "_disableNavbar": false,
-      "_enableSearch": true,
-      "_navRel": "toc.html",
-      //    "_appLogoPath": "logo/lucene-net-color.png",
-      "_appFooter": "Copyright © 2019  <strong>Joseph McNeal Jr</strong>"
-    },
-    "dest": "./",
-    "globalMetadataFiles": [],
-
-    //"template": [ "default", "statictoc", "templates/material" ],
-    "template": [ "default", "statictoc", "templates/darkfx" ],
-    //"template": [ "default", "statictoc", "templates/darkfx" ],
-    "postProcessors": [],
-    "markdownEngineName": "markdig",
-    "noLangKeyword": false,
-    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
-    "keepFileLink": true,
-    "cleanupCacheHistory": true,
-    "disableGitFeatures": false
+     ],
+     "markdownEngineName":"markdig",
+     "noLangKeyword":false,
+     "xrefService":[
+        "https://xref.docs.microsoft.com/query?uid={uid}"
+     ],
+     "keepFileLink":true,
+     "cleanupCacheHistory":true,
+     "disableGitFeatures":false
   }
 }

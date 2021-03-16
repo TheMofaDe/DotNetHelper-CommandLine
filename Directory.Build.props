@@ -1,0 +1,31 @@
+<Project>
+
+
+  
+  
+  <!-- SETUP DEFAULT VALUES  --> 
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+  </PropertyGroup>
+
+
+  <!-- SETUP SOME BUILD PROPERTIES THAT WILL BE USE BY MSBUILD AND CAKE  -->
+  <PropertyGroup>
+    <IsWindows>$([MSBuild]::IsOSPlatform('Windows'))</IsWindows>
+    <IsMac>$([MSBuild]::IsOSPlatform('OSX'))</IsMac>
+    <IsLinux>$([MSBuild]::IsOSPlatform('Linux'))</IsLinux>
+
+    <RepoRootPath>$([MSBuild]::NormalizePath($(MSBuildThisFileDirectory)))</RepoRootPath>
+    <RepoArtifactsRootPath Condition="'$(RepoArtifactsPath)' == ''">$(RepoRootPath)artifacts\</RepoArtifactsRootPath>
+    <RepoSrcPath>$(RepoRootPath)src\</RepoSrcPath>
+    <RepoTestSrcPath>$(RepoRootPath)tests\</RepoTestSrcPath>
+    <RepoSrcRelativeProjectDirectory Condition="$(MSBuildProjectDirectory.Length) >= $(RepoSrcPath.Length)">$(MSBuildProjectDirectory.Substring($(RepoSrcPath.Length)))\</RepoSrcRelativeProjectDirectory>
+  </PropertyGroup>
+
+
+
+  <Import  Condition="'$(MSBuildProjectExtension)' == '.csproj'"  Project="$(RepoRootPath)\build\msbuild\Project.props"/>
+  <Import  Condition="'$(MSBuildProjectExtension)' == '.csproj'"  Project="$(RepoRootPath)\build\msbuild\CI.props"/>
+  <Import  Condition="'$(MSBuildProjectExtension)' == '.csproj'"  Project="$(RepoRootPath)\build\msbuild\Version.props"/>
+
+</Project>

@@ -8,7 +8,7 @@
     <title>DotNetHelper-CommandLine | DotNetHelper-CommandLine </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DotNetHelper-CommandLine | DotNetHelper-CommandLine ">
-    <meta name="generator" content="docfx 2.43.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="logo/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="logo.svg" alt="">
+                <img id="logo" class="svg" src="logo/logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -50,13 +50,16 @@
                           <a href="index.html" title="Home">Home</a>
                       </li>
                       <li>
-                          <a href="api/DotNetHelper_CommandLine.html" title="API">API</a>
+                          <a href="tutorials/index.html" title="Tutorials">Tutorials</a>
                       </li>
                       <li>
-                          <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine/blob/master/CHANGELOG.md" title="Change Log">Change Log</a>
+                          <a href="api/WPF.Core.html" title="API">API</a>
                       </li>
                       <li>
-                          <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine" title="Github">Github</a>
+                          <a href="https://github.com/TheMofaDe/DotNet.Solution.Template/blob/master/CHANGELOG.md" title="Change Log">Change Log</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/TheMofaDe/DotNet.Solution.Template" title="Github">Github</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -73,52 +76,47 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="dotnethelper-commandline">DotNetHelper-CommandLine</h1>
+<h2 id="dotnethelper-commandline">DotNetHelper-CommandLine</h2>
 
-<h4 id="a-cross-platform-command-line-helper-class-that-makes-it-easy-to-run-commands-this-library-also-comes-with-commonly-used-command-see-api-docs-for-examples"><em>A cross-platform command-line helper class that makes it easy to run commands. This library also comes with commonly used command see api docs for examples.</em></h4>
-<p>|| <a href="https://github.com/TheMofaDe/DotNetHelper-CommandLine"><strong>View on Github</strong></a> ||</p>
-<h2 id="features">Features</h2>
-<ul>
-<li>Runs terminal commands</li>
-<li>Works on linux &amp; windows</li>
-</ul>
-<h2 id="how-to-use">How to use</h2>
-<pre><code class="lang-csharp">        static void Main(string[] args)
-        {
-                var cmd = new CommandPrompt();
-                var exitCode = cmd.RunCommand(&quot;ping www.google.com&quot;), null,Exited, OnDataReceived, ErrorDataReceived); // RETURNS 0
-                var exitCode1 = cmd.RunCommand(&quot;ping This is not a valid command&quot;), null, OnDataReceived, ErrorDataReceived, Exited); // RETURN 1
-                Console.ReadLine();
-        }
-        private static void Exited(object sender, EventArgs e)
-        {
-            Console.WriteLine(&quot;command has finished.&quot;);
-        }
-        private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            Console.WriteLine(&quot;error : &quot; + e.Data);
-        }
-        private static void OnDataReceived(object sender, DataReceivedEventArgs args)
-        {
-            Console.WriteLine(&quot;received data : &quot; + args.Data);
-        }
-    }
+<pre><code class="lang-csharp">static void Main(string[] args)
+{
+	var cmd = new CommandPrompt();
+	cmd.OutputDataReceived += OnDataReceived;
+	cmd.Exited += Exited;
+	cmd.ErrorDataReceived += ErrorDataReceived;
+
+    var process = cmd.RunCommand(&quot;ping www.google.com&quot;);
+    // Or if you need wait until the process 
+    var processButExited = cmd.RunCommandAndWaitForExit(&quot;ping www.youtube.com&quot;);
+}
+
+
+private static void Exited(object sender, EventArgs e)
+{
+	Console.WriteLine(&quot;command has exited.&quot;);
+}
+
+private static void ErrorDataReceived(object sender, DataReceivedEventArgs e)
+{
+	Console.WriteLine(&quot;error : &quot; + e.Data);
+}
+
+private static void OnDataReceived(object sender, DataReceivedEventArgs args)
+{
+	Console.WriteLine(&quot;received data : &quot; + args.Data);
+}
 </code></pre>
-<h2 id="results-from-sample-code">Results from sample code</h2>
-<p><img src="images/codesnippet1.PNG" alt="alt text" title="Code Snippet Output"></p>
-<!-- Links. -->
-<!-- Documentation Links. -->
 </article>
           </div>
           
@@ -132,7 +130,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
@@ -146,7 +145,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2019  <strong>Joseph McNeal Jr</strong>
+             <strong>2021 Joseph McNeal Jr</strong>
             
           </div>
         </div>

@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "isRoot": true,
+    "tools": {
+        "cake.tool": {
+            "version": "1.0.0",
+            "commands": [ "dotnet-cake" ]
+        },
+        "dotnet-format": {
+            "version": "5.0.211103",
+            "commands": [ "dotnet-format" ]
+        },
+        "Codecov.Tool": {
+            "version": "1.12.3",
+            "commands": ["codecov"]
+        }
+    }
+}
+  
