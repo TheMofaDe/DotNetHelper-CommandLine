@@ -81,6 +81,7 @@ namespace Tests
 			Assert.Null(exception);
 			Assert.Equal(0,exitCode);
 			Assert.Equal(expectedValue, actualValue);
+			cmd.Dispose();
 		}
 #endif
 
@@ -115,6 +116,7 @@ namespace Tests
 			Assert.Null(exception);
 			Assert.Equal(0, exitCode);
 			Assert.Equal(expectedValue, actualValue);
+			cmd.Dispose();
 		}
 
 
@@ -148,6 +150,7 @@ namespace Tests
 			Assert.Null(exception);
 			Assert.Equal(0, exitCode);
 			Assert.Equal(expectedValue, actualValue);
+			cmd.Dispose();
 		}
 
 
@@ -179,8 +182,40 @@ namespace Tests
 
 			//Assert
 			Assert.NotNull(exception);
-			Assert.Equal(null, exitCode);
+			Assert.NotNull(exitCode);
 			Assert.Equal(string.Empty, actualValue);
+			cmd.Dispose();
+		}
+
+
+		[Theory]
+		[InlineData(true)]
+		[InlineData(false)]
+		public void RunCommand_ShouldFireRaisedExited(bool hideWindow)
+		{
+			// Arrange
+			var cmd = new CommandPrompt(hideWindow);
+			var wasEventRaised = false;
+			int? exitCode = null;
+			var expectedValue = "myname";
+			var command = $"echo {expectedValue}";
+
+			cmd.Exited += delegate(object sender, EventArgs args)
+			{
+				wasEventRaised = true;
+			};
+			// Act
+			var exception = Record.Exception(() =>
+			{
+				var process = cmd.RunCommand(command);
+				process.WaitForExit();
+				exitCode = process.ExitCode;
+			});
+
+
+			//Assert
+			Assert.True(wasEventRaised);
+			cmd.Dispose();
 		}
 
 	}
