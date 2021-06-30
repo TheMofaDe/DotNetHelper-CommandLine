@@ -112,17 +112,33 @@ namespace DotNetHelper_CommandLine
 		/// <returns>a new instance of ProcessStartInfo </returns>
 		public ProcessStartInfo CreateStartInfo(string command, string workingDirectory = "./", bool hideWindow = true)
 		{
-			var info = new ProcessStartInfo(CmdLocation, Argument + command)
+			var argument =  Argument + command;
+#if NETSTANDARD || NET5_0_OR_GREATER			
+			if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                var escapedArgs = command.Replace("\"", "\\\"");
+				argument = $"{Argument} \"{escapedArgs}\"";
+            }
+#endif
+
+			var info = new ProcessStartInfo(CmdLocation,argument)
 			{
 				CreateNoWindow = hideWindow,
 				UseShellExecute = false,
 				WorkingDirectory = workingDirectory, // defaults  $@"./"
 				RedirectStandardError = ErrorDataReceived != null,
 				RedirectStandardOutput = OutputDataReceived != null,
-				Password = Password,
 				UserName = RunAsUser,
 				Verb = (string.IsNullOrEmpty(RunAsUser) ? string.Empty : "runas"),
 			};
+#if NETSTANDARD || NET5_0_OR_GREATER			
+			if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                info.Password = Password;
+            }
+#else
+			 info.Password = Password; // .NET FRAMEWORK HAS TO BE WINDOWS
+#endif
 			return info;
 		}
 
