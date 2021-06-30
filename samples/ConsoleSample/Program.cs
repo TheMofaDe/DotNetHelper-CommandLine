@@ -15,7 +15,7 @@ namespace ConsoleSample
 
 			var process = cmd.RunCommand("ping www.google.com");
 			// Or if you need wait until the process 
-			var processButExited = cmd.RunCommandAndWaitForExit("ping www.youtube.com");
+			var processButExited = cmd.RunCommandAndWaitForExit("ping www.youtube.com","./",TimeSpan.FromMilliseconds(100));
 			Console.ReadKey();
 		}
 
