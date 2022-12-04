@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -47,7 +48,7 @@ namespace Tests
 
 			//Assert
 			Assert.Null(exception);
-			Assert.Equal(1, exitCode);
+			Assert.Equal(RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? 127 :  1, exitCode);
 			Assert.NotEmpty(actualErrorValue.ToCharArray());
 		}
 
