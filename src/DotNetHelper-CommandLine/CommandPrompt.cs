@@ -14,22 +14,22 @@ namespace DotNetHelper_CommandLine
 	/// </summary>
 	public class CommandPrompt : IDisposable
 	{
-		public string RunAsUser { get; private set; }
-		private SecureString Password { get; set; }
+		public string? RunAsUser { get; private set; }
+		private SecureString? Password { get; set; }
 		/// <summary>
 		/// Occurs when the process exits
 		/// </summary>
-		public event EventHandler Exited;
+		public event EventHandler? Exited;
 		/// <summary>
 		/// event handler for responses return during the execution of the command
 		/// </summary>
-		public event DataReceivedEventHandler OutputDataReceived;
+		public event DataReceivedEventHandler? OutputDataReceived;
 		/// <summary>
 		/// event handler for error responses return during the execution of the command
 		/// </summary>
-		public event DataReceivedEventHandler ErrorDataReceived;
+		public event DataReceivedEventHandler? ErrorDataReceived;
 
-		private string CmdLocation
+		private static string CmdLocation
 		{
 			get
 			{
@@ -41,7 +41,7 @@ namespace DotNetHelper_CommandLine
 			}
 		}
 
-		private string Argument
+		private static string Argument
 		{
 			get
 			{
@@ -55,7 +55,7 @@ namespace DotNetHelper_CommandLine
 
 		public bool CreateNoWindow { get; set; } = false;
 
-
+		
 		public CommandPrompt()
 		{
 			CreateNoWindow = false;
@@ -90,10 +90,10 @@ namespace DotNetHelper_CommandLine
 		/// </summary>
 		/// <param name="password"></param>
 		/// <returns></returns>
-		public SecureString CreateSecurePassword(string password)
+		/// <exception cref="ArgumentNullException"> Throws when password argument is null</exception>
+		public static SecureString CreateSecurePassword(string password)
 		{
-			if (password == null)
-				return null;
+			ArgumentNullException.ThrowIfNull(password);
 			var securePassword = new SecureString();
 			foreach (var c in password.ToCharArray())
 			{
@@ -128,9 +128,10 @@ namespace DotNetHelper_CommandLine
 				WorkingDirectory = workingDirectory, // defaults  $@"./"
 				RedirectStandardError = ErrorDataReceived != null,
 				RedirectStandardOutput = OutputDataReceived != null,
-				UserName = RunAsUser,
 				Verb = (string.IsNullOrEmpty(RunAsUser) ? string.Empty : "runas"),
 			};
+			if(RunAsUser is not null)
+				info.UserName = RunAsUser; 
 #if NETSTANDARD || NET5_0_OR_GREATER			
 			if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
@@ -149,7 +150,7 @@ namespace DotNetHelper_CommandLine
 		/// <param name="command">the command to run</param>
 		/// <param name="workingDirectory">sets the working directory for the command to be run</param>
 		/// <returns>the process </returns>
-		public Process RunCommand(string command, string workingDirectory = "./")
+		public Process? RunCommand(string command, string workingDirectory = "./")
 		{
 			var info = CreateStartInfo(command, workingDirectory, CreateNoWindow);
 			var process = Process.Start(info);
@@ -187,7 +188,7 @@ namespace DotNetHelper_CommandLine
 		/// <param name="command">the command to run</param>
 		/// <param name="workingDirectory">sets the working directory for the command to be run</param>
 		/// <returns>the associated process  and whether or not the process exited</returns>
-		public (Process process, bool? didProcessExit) RunCommandAndWaitForExit(string command, string workingDirectory = "./", TimeSpan? timeout = null)
+		public (Process? process, bool? didProcessExit) RunCommandAndWaitForExit(string command, string workingDirectory = "./", TimeSpan? timeout = null)
 		{
 			var info = CreateStartInfo(command, workingDirectory, CreateNoWindow);
 			var process = Process.Start(info);
@@ -218,7 +219,7 @@ namespace DotNetHelper_CommandLine
 
 			if (timeout is null)
 			{
-				process.WaitForExit();
+				process?.WaitForExit();
 				return (process, true);
 			}
 			else
@@ -238,7 +239,7 @@ namespace DotNetHelper_CommandLine
 		/// <param name="workingDirectory">sets the working directory for the command to be run</param>
 		/// <param name="cancellationToken">cancellation token for how long the process should wait to be exited</param>
 		/// <returns>the process </returns>
-		public async Task<Process> RunCommandAndWaitForExitAsync(string command, string workingDirectory = "./",
+		public async Task<Process?> RunCommandAndWaitForExitAsync(string command, string workingDirectory = "./",
 			CancellationToken cancellationToken = default)
 		{
 			var info = CreateStartInfo(command, workingDirectory, CreateNoWindow);
@@ -269,8 +270,8 @@ namespace DotNetHelper_CommandLine
 				}
 			}
 
-			if (process != null)
-				 await process?.WaitForExitAsync(cancellationToken);
+			if (process is not null)
+				 await process.WaitForExitAsync(cancellationToken);
 			return (process);
 		}
 #endif
@@ -282,6 +283,7 @@ namespace DotNetHelper_CommandLine
 			ErrorDataReceived = null;
 			OutputDataReceived = null;
 			Exited = null;
+			GC.SuppressFinalize(this);
 		}
 	}
 }

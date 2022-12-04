@@ -13,7 +13,7 @@ namespace Tests
 	public class CommandPromptTests
 	{
 		public MemoryStream MemoryStream = new();
-		public StreamWriter StreamWriter { get; }
+		public StreamWriter? StreamWriter { get; }
 		public CommandPromptTests()
 		{
 			//StreamWriter = new StreamWriter(MemoryStream) {AutoFlush = true};
@@ -41,7 +41,7 @@ namespace Tests
 			var exception = await Record.ExceptionAsync(async () =>
 			{
 				var process = await cmd.RunCommandAndWaitForExitAsync(command);
-				exitCode = process.ExitCode;
+				exitCode = process?.ExitCode;
 			});
 
 
@@ -74,7 +74,7 @@ namespace Tests
 			var exception = await Record.ExceptionAsync(async () =>
 			{
 				var process = await cmd.RunCommandAndWaitForExitAsync(command);
-				exitCode = process.ExitCode;
+				exitCode = process?.ExitCode;
 			});
 			
 			
@@ -108,8 +108,8 @@ namespace Tests
 			var exception = Record.Exception(() =>
 			{
 				var process = cmd.RunCommand(command);
-				process.WaitForExit();
-				exitCode = process.ExitCode;
+				process?.WaitForExit();
+				exitCode = process?.ExitCode;
 			});
 
 
@@ -142,8 +142,8 @@ namespace Tests
 			// Act
 			var exception = Record.Exception(() =>
 			{
-				(Process process, var didProcessExit) = cmd.RunCommandAndWaitForExit(command);
-				exitCode = process.ExitCode;
+				(Process? process, var didProcessExit) = cmd.RunCommandAndWaitForExit(command);
+				exitCode = process?.ExitCode;
 			});
 
 
@@ -205,7 +205,7 @@ namespace Tests
 			var expectedValue = "myname";
 			var command = $"echo {expectedValue}";
 
-			cmd.Exited += delegate(object sender, EventArgs args)
+			cmd.Exited += delegate(object? sender, EventArgs args)
 			{
 				wasEventRaised = true;
 			};
@@ -213,8 +213,8 @@ namespace Tests
 			var exception = Record.Exception(() =>
 			{
 				var process = cmd.RunCommand(command);
-				process.WaitForExit();
-				exitCode = process.ExitCode;
+				process?.WaitForExit();
+				exitCode = process?.ExitCode;
 			});
 
 

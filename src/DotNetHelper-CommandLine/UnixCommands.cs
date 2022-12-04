@@ -161,7 +161,7 @@ namespace DotNetHelper_CommandLine
 		/// <param name="delay"></param>
 		/// <param name="message"></param>
 		/// <returns></returns>
-		public static string Reboot(bool force, TimeSpan? delay = null, string message = null)
+		public static string Reboot(bool force, TimeSpan? delay = null, string? message = null)
 		{
 			var shutdown = "shutdown -r";
 			if (force)

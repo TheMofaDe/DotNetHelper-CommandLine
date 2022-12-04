@@ -6,7 +6,7 @@ namespace ConsoleSample
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			var cmd = new CommandPrompt() { };
 			cmd.OutputDataReceived += OnDataReceived;
@@ -14,7 +14,7 @@ namespace ConsoleSample
 			cmd.ErrorDataReceived += ErrorDataReceived;
 
 			var process = cmd.RunCommand("ping www.google.com");
-			// Or if you need wait until the process 
+			// Or if you need wait until the process finishes
 			var processButExited = cmd.RunCommandAndWaitForExit("ping www.youtube.com","./",TimeSpan.FromMilliseconds(100));
 			Console.ReadKey();
 		}

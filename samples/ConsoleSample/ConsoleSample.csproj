@@ -2,11 +2,15 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DotNetHelper-CommandLine\DotNetHelper-CommandLine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="GitInfo" Version="2.3.0" />
   </ItemGroup>
 
 </Project>
